@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="" />
+    <list default="true" id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="Find elements elementary">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/FirstSeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/FirstSeleniumTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +36,18 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadAnnotationsAutomatically" value="true" />
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="jdkForImporter" value="14" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1lybJMhlxzbauJUDpSCGbyn5MNN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,10 +58,85 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../UCSD kurs/Week2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="JUnit.FirstSeleniumTest.shouldFind11InputElementsOnGoogle">
+    <configuration name="FirstSeleniumTest.s" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.FirstSeleniumTest" />
+      <option name="METHOD_NAME" value="s" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstSeleniumTest.shouldDoSth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.FirstSeleniumTest" />
+      <option name="METHOD_NAME" value="shouldDoSth" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstSeleniumTest.shouldFind11InputElementsOnGoogle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.FirstSeleniumTest" />
+      <option name="METHOD_NAME" value="shouldFind11InputElementsOnGoogle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirstSeleniumTest.shouldFindElementOnGoogleWebSite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.FirstSeleniumTest" />
+      <option name="METHOD_NAME" value="shouldFindElementOnGoogleWebSite" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FirstSeleniumTest.shouldFind11InputElementsOnGoogle" />
+        <item itemvalue="JUnit.FirstSeleniumTest.shouldFindElementOnGoogleWebSite" />
+        <item itemvalue="JUnit.FirstSeleniumTest.s" />
+        <item itemvalue="JUnit.FirstSeleniumTest.shouldDoSth" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,12 +149,83 @@
       <option name="presentableId" value="Default" />
       <updated>1608572205697</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit setting up env">
+      <created>1608573311678</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608573311678</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Find elements elementary">
+      <created>1608656512302</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608656512302</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit setting up env" />
+    <MESSAGE value="Find elements elementary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Find elements elementary" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="78" key="#Project_Structure" timestamp="1608572932028">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="78" key="#Project_Structure/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608572932028" />
+    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1608656531202">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608656531202" />
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1608656944648">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608656944648" />
+    <state width="1636" height="254" key="GridCell.Tab.0.bottom" timestamp="1608657662167">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657662167" />
+    <state width="1636" height="254" key="GridCell.Tab.0.center" timestamp="1608657662167">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657662167" />
+    <state width="1636" height="254" key="GridCell.Tab.0.left" timestamp="1608657662167">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657662167" />
+    <state width="1636" height="254" key="GridCell.Tab.0.right" timestamp="1608657662167">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="254" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657662167" />
+    <state x="655" y="437" key="ReplaceDuplicatesPrompt" timestamp="1608657337814">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="655" y="437" key="ReplaceDuplicatesPrompt/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657337814" />
+    <state x="341" y="135" key="SettingsEditor" timestamp="1608577252419">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="135" key="SettingsEditor/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608577252419" />
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1608656559685">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608656559685" />
+    <state x="570" y="254" key="extract.method.dialog" timestamp="1608657328452">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="570" y="254" key="extract.method.dialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657328452" />
   </component>
 </project>
