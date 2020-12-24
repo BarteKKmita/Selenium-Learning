@@ -2,26 +2,22 @@ package com.learning;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class FirstSeleniumTest {
 
-  private static WebDriver driver;
-  public static String chromeProfilePath = "C://Users//Bartek//AppData//Local//Google//Chrome/User Data";
+  private WebDriver driver;
 
   @BeforeAll
-  static void setUp() {
-    System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("user-data-dir=" + chromeProfilePath);
-    driver = new ChromeDriver(options);
+  public void setUp() {
+    driver = new ChromeDriverGenerator().getChromeDriver();
   }
 
   @Test
@@ -40,7 +36,7 @@ public class FirstSeleniumTest {
   }
 
   @Test
-  void shouldFind11InputElementsOnGoogle() {
+  void shouldFind9InputElementsOnGoogle() {
     //Given
     int expectedInputElements = 9;
     //When
@@ -62,8 +58,8 @@ public class FirstSeleniumTest {
     return driver.findElement(By.name("btnK"));
   }
 
-  @AfterEach
-  void tearDown() {
+  @AfterAll
+  void shoutDown() {
     driver.close();
     driver.quit();
   }
