@@ -2,6 +2,8 @@ package com.learning;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.learning.pages.ChromeDriverGenerator;
+import com.learning.pages.GoogleSearchPage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -29,8 +31,8 @@ public class FirstSeleniumTest {
   @Test
   void shouldFindElementOnGoogleWebSite() {
     getGoogleWebsite();
-    WebElement googleSearch = getGoogleSearchTextBox();
-    WebElement searchButton = getSearchInGoogleBtn();
+    WebElement googleSearch = GoogleSearchPage.getGoogleSearchTextBox(driver);
+    WebElement searchButton = GoogleSearchPage.getSearchInGoogleBtn(driver);
     googleSearch.sendKeys("Getting grip on it! ");
     searchButton.submit();
   }
@@ -48,14 +50,6 @@ public class FirstSeleniumTest {
 
   private void getGoogleWebsite() {
     driver.get("https://google.com");
-  }
-
-  private WebElement getGoogleSearchTextBox() {
-    return driver.findElement(By.name("q"));
-  }
-
-  private WebElement getSearchInGoogleBtn() {
-    return driver.findElement(By.name("btnK"));
   }
 
   @AfterAll

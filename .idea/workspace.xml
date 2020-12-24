@@ -26,11 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/ChromeDriverGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/GoogleSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/GoogleSearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/ChromeDriverGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/ChromeDriverGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/FirstSeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/FirstSeleniumTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/GoogleSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/GoogleSearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +91,7 @@
       <module name="Selenium learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learning.*" />
+          <option name="PATTERN" value="com.learning.pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +107,7 @@
       <module name="Selenium learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learning.*" />
+          <option name="PATTERN" value="com.learning.pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,7 +123,7 @@
       <module name="Selenium learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learning.*" />
+          <option name="PATTERN" value="com.learning.pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,7 +139,7 @@
       <module name="Selenium learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learning.*" />
+          <option name="PATTERN" value="com.learning.pages.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -193,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608657771141</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Simple google search test - improved">
+      <created>1608802767166</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608802767166</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +230,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit setting up env" />
     <MESSAGE value="Find elements elementary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Find elements elementary" />
+    <MESSAGE value="Simple google search test - improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple google search test - improved" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="78" key="#Project_Structure" timestamp="1608572932028">
@@ -234,34 +242,34 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608800729785" />
-    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1608657769752">
+    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1608802766008">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657769752" />
-    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1608656944648">
+    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608802766008" />
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1608802737445">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608656944648" />
-    <state width="1636" height="310" key="GridCell.Tab.0.bottom" timestamp="1608801775911">
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608802737445" />
+    <state width="1636" height="310" key="GridCell.Tab.0.bottom" timestamp="1608804737946">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="254" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608735662283" />
-    <state width="1636" height="310" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608801775911" />
-    <state width="1636" height="310" key="GridCell.Tab.0.center" timestamp="1608801775910">
+    <state width="1636" height="310" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608804737946" />
+    <state width="1636" height="310" key="GridCell.Tab.0.center" timestamp="1608804737946">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="254" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608735662283" />
-    <state width="1636" height="310" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608801775910" />
-    <state width="1636" height="310" key="GridCell.Tab.0.left" timestamp="1608801775910">
+    <state width="1636" height="310" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608804737946" />
+    <state width="1636" height="310" key="GridCell.Tab.0.left" timestamp="1608804737946">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="254" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608735662283" />
-    <state width="1636" height="310" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608801775910" />
-    <state width="1636" height="310" key="GridCell.Tab.0.right" timestamp="1608801775910">
+    <state width="1636" height="310" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608804737946" />
+    <state width="1636" height="310" key="GridCell.Tab.0.right" timestamp="1608804737946">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="254" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608735662283" />
-    <state width="1636" height="310" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608801775910" />
+    <state width="1636" height="310" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608804737946" />
     <state x="655" y="437" key="ReplaceDuplicatesPrompt" timestamp="1608657337814">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -270,10 +278,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="135" key="SettingsEditor/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608800672188" />
-    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1608657785988">
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1608802774222">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657785988" />
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608802774222" />
     <state x="570" y="254" key="extract.method.dialog" timestamp="1608657328452">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
