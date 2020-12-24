@@ -4,20 +4,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.learning.pages.ChromeDriverGenerator;
 import com.learning.pages.GoogleSearchPage;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class FirstSeleniumTest {
 
   private WebDriver driver;
 
-  @BeforeAll
+  @BeforeTest
   public void setUp() {
     driver = new ChromeDriverGenerator().getChromeDriver();
   }
@@ -52,8 +50,8 @@ public class FirstSeleniumTest {
     driver.get("https://google.com");
   }
 
-  @AfterAll
-  void shoutDown() {
+  @AfterClass
+  void tearDown() {
     driver.close();
     driver.quit();
   }

@@ -1,32 +1,34 @@
 package com.learning;
 
 import com.learning.pages.ChromeDriverGenerator;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class GoogleSearchTest {
   private WebDriver driver;
 
-  @BeforeAll
+  @BeforeClass
   public void setUp() {
     driver = new ChromeDriverGenerator().getChromeDriver();
   }
 
   @Test
-  void testGoogleSearch() {
+  public void testGoogleSearch() {
     //Given
     driver.get("https://google.com");
     WebElement searchTextBox = driver.findElement(By.name("q"));
     //When
     searchTextBox.sendKeys("Simodrive launch");
     searchTextBox.sendKeys(Keys.ENTER);
-    //Then
+  }
+
+  @AfterClass
+  public void tearDown(){
     driver.close();
   }
 }
