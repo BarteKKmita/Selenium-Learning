@@ -1,4 +1,4 @@
-package com.learning.pages;
+package com.learning.excel;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 public class ExcelTest {
 
   private XSSFWorkbook excelWorkbook;
-  private static final String EXCEL_FILE_NAME = "data.xlsx";
+  public static final String EXCEL_FILE_NAME = "data.xlsx";
 
   @SneakyThrows
   @Test
