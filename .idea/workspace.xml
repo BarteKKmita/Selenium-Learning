@@ -26,9 +26,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/ExcelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/ExcelDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/GetDataFromExcelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/SheetWorkbookHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/pages/ExcelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/ExcelTest.java" afterDir="false" />
+    </list>
+    <list id="abb05633-97fe-4ff2-a4ec-097699b02764" name="testcomit" comment="">
+      <change beforePath="$PROJECT_DIR$/data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/FirstSeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/FirstSeleniumTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +76,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -81,23 +89,7 @@
       <recent name="C:\Users\Bartek\Desktop\Java\Selenium learning" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ExcelTest.shouldEditExcelFile">
-    <configuration name="test.checkDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learning" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.test" />
-      <option name="METHOD_NAME" value="checkDirectory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.ExcelDataProvider">
     <configuration name="C:/Users/Bartek/Desktop/Java/Selenium learning/testng.xml" type="TestNG" nameIsGenerated="true">
       <module name="Selenium learning" />
       <useClassPathOnly />
@@ -116,34 +108,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DesiredCapabilitiesTest.getGoogleWebsite" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExcelDataProvider" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
+          <option name="PATTERN" value="com.learning.excel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.DesiredCapabilitiesTest" />
-      <option name="METHOD_NAME" value="getGoogleWebsite" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExcelTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ExcelTest" />
+      <option name="PACKAGE_NAME" value="com.learning.excel" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.excel.ExcelDataProvider" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -151,17 +125,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExcelTest.shouldAddColumn" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExcelDataProvider.s" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
+          <option name="PATTERN" value="com.learning.excel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ExcelTest" />
-      <option name="METHOD_NAME" value="shouldAddColumn" />
+      <option name="PACKAGE_NAME" value="com.learning.excel" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.excel.ExcelDataProvider" />
+      <option name="METHOD_NAME" value="s" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -169,18 +143,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExcelTest.shouldEditExcelFile" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetDataFromExcelTest.shouldGetCellValue" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
+          <option name="PATTERN" value="com.learning.excel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ExcelTest" />
-      <option name="METHOD_NAME" value="shouldEditExcelFile" />
+      <option name="PACKAGE_NAME" value="com.learning.excel" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.excel.GetDataFromExcelTest" />
+      <option name="METHOD_NAME" value="shouldGetCellValue" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetDataFromExcelTest.shouldThrowWhenGettingNotNumericDataAsNumeric" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.excel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning.excel" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.excel.GetDataFromExcelTest" />
+      <option name="METHOD_NAME" value="shouldThrowWhenGettingNotNumericDataAsNumeric" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.learning.excel" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.excel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning.excel" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
       <method v="2">
@@ -189,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ExcelTest.shouldEditExcelFile" />
-        <item itemvalue="TestNG.ExcelTest.shouldAddColumn" />
-        <item itemvalue="TestNG.ExcelTest" />
-        <item itemvalue="TestNG.DesiredCapabilitiesTest.getGoogleWebsite" />
-        <item itemvalue="JUnit.test.checkDirectory" />
+        <item itemvalue="TestNG.ExcelDataProvider" />
+        <item itemvalue="TestNG.com.learning.excel" />
+        <item itemvalue="TestNG.ExcelDataProvider.s" />
+        <item itemvalue="TestNG.GetDataFromExcelTest.shouldThrowWhenGettingNotNumericDataAsNumeric" />
+        <item itemvalue="TestNG.GetDataFromExcelTest.shouldGetCellValue" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +211,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="" />
+      <changelist id="abb05633-97fe-4ff2-a4ec-097699b02764" name="testcomit" comment="" />
       <created>1608572205697</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -257,7 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608825274267</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add handling excel files">
+      <created>1608889338907</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608889338907</updated>
+    </task>
+    <task id="LOCAL-00009" summary="testcomit">
+      <created>1608892423469</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608892423469</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -291,7 +314,9 @@
     <MESSAGE value="Page object model fundamentals" />
     <MESSAGE value="Add TestNG and ExtentReports" />
     <MESSAGE value="Add testing.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add testing.xml" />
+    <MESSAGE value="Add handling excel files" />
+    <MESSAGE value="testcomit" />
+    <option name="LAST_COMMIT_MESSAGE" value="testcomit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="508" y="15" key="#&lt;default&gt;" timestamp="1608819874473">
@@ -306,52 +331,74 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="336" y="58" key="#GoogleSearchTest/0.0.1600.860@0.0.1600.860" timestamp="1608819949556" />
-    <state x="320" y="78" key="#Project_Structure" timestamp="1608572932028">
+    <state x="320" y="78" key="#Project_Structure" timestamp="1608892647777">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="320" y="78" key="#Project_Structure/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608572932028" />
-    <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1608800729785">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608800729785" />
-    <state x="443" y="0" key="CommitChangelistDialog2" timestamp="1608825273162">
+    <state x="320" y="78" key="#Project_Structure/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608892647777" />
+    <state x="614" y="174" key="#com.intellij.ide.util.MemberChooser" timestamp="1608901338024">
       <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="614" y="174" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1608901338024" />
+    <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608800729785" />
+    <state x="460" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608901531978">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="460" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1608901531978" />
+    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1608892422381">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="443" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608825273162" />
-    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814641643" />
-    <state x="88" y="78" width="1496" height="826" key="DiffContextDialog" timestamp="1608825260261">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608892422381" />
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1608896499733">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="88" y="78" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1608825260261" />
-    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814704903" />
-    <state width="1636" height="289" key="GridCell.Tab.0.bottom" timestamp="1608888823031">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1556" height="310" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="289" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823031" />
-    <state width="1636" height="289" key="GridCell.Tab.0.center" timestamp="1608888823031">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1556" height="310" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="289" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823031" />
-    <state width="1636" height="289" key="GridCell.Tab.0.left" timestamp="1608888823030">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1556" height="310" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="289" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823030" />
-    <state width="1636" height="289" key="GridCell.Tab.0.right" timestamp="1608888823031">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state width="1556" height="310" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="289" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823031" />
-    <state x="655" y="437" key="ReplaceDuplicatesPrompt" timestamp="1608657337814">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="655" y="437" key="ReplaceDuplicatesPrompt/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657337814" />
-    <state x="536" y="131" key="RollbackChangesDialog" timestamp="1608818538609">
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608896499733" />
+    <state width="1556" height="208" key="GridCell.Tab.0.bottom" timestamp="1608903360975">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1556" height="208" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state width="1636" height="289" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619437" />
+    <state width="1556" height="208" key="GridCell.Tab.0.center" timestamp="1608903360975">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1556" height="208" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state width="1636" height="289" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619437" />
+    <state width="1556" height="208" key="GridCell.Tab.0.left" timestamp="1608903360975">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1556" height="208" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state width="1636" height="289" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619436" />
+    <state width="1556" height="208" key="GridCell.Tab.0.right" timestamp="1608903360975">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1556" height="208" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state width="1636" height="289" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619437" />
+    <state width="1636" height="330" key="GridCell.Tab.1.bottom" timestamp="1608897584033">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
+    <state width="1636" height="330" key="GridCell.Tab.1.center" timestamp="1608897584033">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
+    <state width="1636" height="330" key="GridCell.Tab.1.left" timestamp="1608897584033">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
+    <state width="1636" height="330" key="GridCell.Tab.1.right" timestamp="1608897584033">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
+    <state x="655" y="437" key="ReplaceDuplicatesPrompt" timestamp="1608897771826">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="655" y="437" key="ReplaceDuplicatesPrompt/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897771826" />
+    <state x="563" y="154" key="RollbackChangesDialog" timestamp="1608897934436">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
     <state x="536" y="131" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1608818538609" />
+    <state x="563" y="154" key="RollbackChangesDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897934436" />
     <state x="325" y="115" key="SettingsEditor" timestamp="1608819902271">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -361,18 +408,27 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608889079952" />
-    <state x="411" y="201" key="Vcs.Push.Dialog.v2" timestamp="1608825275565">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="687" y="418" key="VCS.ChangelistChooser" timestamp="1608896400279">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="687" y="418" key="VCS.ChangelistChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608896400279" />
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1608889340561">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="411" y="201" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608825275565" />
-    <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814646061" />
-    <state x="570" y="254" key="extract.method.dialog" timestamp="1608889184607">
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608889340561" />
+    <state x="917" y="358" key="extract.method.dialog" timestamp="1608901835613">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="917" y="358" key="extract.method.dialog/0.0.1600.860@0.0.1600.860" timestamp="1608901835613" />
+    <state x="963" y="449" key="extract.method.dialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897768638" />
+    <state x="595" y="176" key="refactoring.ChangeSignatureDialog" timestamp="1608901580039">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="595" y="176" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1608901580039" />
+    <state x="503" y="217" width="672" height="60" key="search.everywhere.popup" timestamp="1608891395066">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="570" y="254" key="extract.method.dialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608889184607" />
-    <state x="503" y="217" key="search.everywhere.popup" timestamp="1608888054903">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="503" y="217" key="search.everywhere.popup/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888054903" />
+    <state x="503" y="217" width="672" height="60" key="search.everywhere.popup/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608891395066" />
   </component>
 </project>
