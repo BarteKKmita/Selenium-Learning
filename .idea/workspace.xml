@@ -26,10 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/DesiredCapabilitiesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/ExcelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/pages/ChromeDriverGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/ChromeDriverGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,23 +76,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Bartek/Desktop/Java/Selenium learning/testng.xml">
-    <configuration name="ChromeDriverGenerator.checkDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ChromeDriverGenerator" />
-      <option name="METHOD_NAME" value="checkDirectory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bartek\Desktop\Java\Selenium learning" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.ExcelTest.shouldEditExcelFile">
     <configuration name="test.checkDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <extension name="coverage">
@@ -128,41 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChromeDriverGenerator.checkDirectory" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ChromeDriverGenerator" />
-      <option name="METHOD_NAME" value="checkDirectory" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DesiredCapabilitiesTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.DesiredCapabilitiesTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DesiredCapabilitiesTest.getGoogleWebsite" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <extension name="coverage">
@@ -181,13 +134,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExcelTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning.pages" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ExcelTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExcelTest.shouldAddColumn" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning.pages" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ExcelTest" />
+      <option name="METHOD_NAME" value="shouldAddColumn" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExcelTest.shouldEditExcelFile" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.pages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning.pages" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.pages.ExcelTest" />
+      <option name="METHOD_NAME" value="shouldEditExcelFile" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ExcelTest.shouldEditExcelFile" />
+        <item itemvalue="TestNG.ExcelTest.shouldAddColumn" />
+        <item itemvalue="TestNG.ExcelTest" />
         <item itemvalue="TestNG.DesiredCapabilitiesTest.getGoogleWebsite" />
         <item itemvalue="JUnit.test.checkDirectory" />
-        <item itemvalue="JUnit.ChromeDriverGenerator.checkDirectory" />
-        <item itemvalue="TestNG.ChromeDriverGenerator.checkDirectory" />
-        <item itemvalue="TestNG.DesiredCapabilitiesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608814642661</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add testing.xml">
+      <created>1608825274267</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608825274267</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,7 +290,8 @@
     <MESSAGE value="Simple google search test - improved" />
     <MESSAGE value="Page object model fundamentals" />
     <MESSAGE value="Add TestNG and ExtentReports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add TestNG and ExtentReports" />
+    <MESSAGE value="Add testing.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add testing.xml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="508" y="15" key="#&lt;default&gt;" timestamp="1608819874473">
@@ -300,34 +314,36 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608800729785" />
-    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1608814641643">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814641643" />
-    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1608814704903">
-      <screen x="0" y="0" width="1680" height="1010" />
-    </state>
-    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814704903" />
-    <state width="1556" height="310" key="GridCell.Tab.0.bottom" timestamp="1608820537555">
+    <state x="443" y="0" key="CommitChangelistDialog2" timestamp="1608825273162">
       <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="443" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608825273162" />
+    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814641643" />
+    <state x="88" y="78" width="1496" height="826" key="DiffContextDialog" timestamp="1608825260261">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="88" y="78" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1608825260261" />
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814704903" />
+    <state width="1636" height="289" key="GridCell.Tab.0.bottom" timestamp="1608888823031">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="310" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="310" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608816356963" />
-    <state width="1556" height="310" key="GridCell.Tab.0.center" timestamp="1608820537555">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1636" height="289" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823031" />
+    <state width="1636" height="289" key="GridCell.Tab.0.center" timestamp="1608888823031">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="310" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="310" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608816356963" />
-    <state width="1556" height="310" key="GridCell.Tab.0.left" timestamp="1608820537555">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1636" height="289" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823031" />
+    <state width="1636" height="289" key="GridCell.Tab.0.left" timestamp="1608888823030">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="310" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="310" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608816356962" />
-    <state width="1556" height="310" key="GridCell.Tab.0.right" timestamp="1608820537555">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1636" height="289" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823030" />
+    <state width="1636" height="289" key="GridCell.Tab.0.right" timestamp="1608888823031">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="310" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608820537555" />
-    <state width="1636" height="310" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608816356963" />
+    <state width="1636" height="289" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888823031" />
     <state x="655" y="437" key="ReplaceDuplicatesPrompt" timestamp="1608657337814">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -341,17 +357,22 @@
     </state>
     <state x="325" y="115" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1608819902271" />
     <state x="341" y="135" key="SettingsEditor/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608806232580" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1608814994050">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1608889079952">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814994050" />
-    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1608814646061">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608889079952" />
+    <state x="411" y="201" key="Vcs.Push.Dialog.v2" timestamp="1608825275565">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="411" y="201" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608825275565" />
     <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608814646061" />
-    <state x="570" y="254" key="extract.method.dialog" timestamp="1608657328452">
+    <state x="570" y="254" key="extract.method.dialog" timestamp="1608889184607">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="570" y="254" key="extract.method.dialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608657328452" />
+    <state x="570" y="254" key="extract.method.dialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608889184607" />
+    <state x="503" y="217" key="search.everywhere.popup" timestamp="1608888054903">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="503" y="217" key="search.everywhere.popup/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608888054903" />
   </component>
 </project>
