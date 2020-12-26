@@ -5,7 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.learning.pages.ChromeDriverGenerator;
+import com.learning.browsers.ChromeDriverGenerator;
 import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
@@ -22,7 +22,7 @@ public class ExtentReportsTest {
     ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
     extentReports = new ExtentReports();
     extentReports.attachReporter(htmlReporter);
-    chromeDriver = new ChromeDriverGenerator().getChromeDriver();
+    chromeDriver = new ChromeDriverGenerator().getDriver();
   }
 
   @SneakyThrows
