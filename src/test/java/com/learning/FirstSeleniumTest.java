@@ -38,7 +38,7 @@ public class FirstSeleniumTest {
   @Test
   void shouldFind9InputElementsOnGoogle() {
     //Given
-    int expectedInputElements = 9;
+    int expectedInputElements = 8;
     //When
     getGoogleWebsite();
     int actualInputElements = driver.findElements(By.xpath("//input")).size();
