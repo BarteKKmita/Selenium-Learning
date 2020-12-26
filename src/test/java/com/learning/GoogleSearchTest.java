@@ -1,6 +1,6 @@
 package com.learning;
 
-import com.learning.pages.ChromeDriverGenerator;
+import com.learning.browsers.ChromeDriverGenerator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ public class GoogleSearchTest {
 
   @BeforeClass
   public void setUp() {
-    driver = new ChromeDriverGenerator().getChromeDriver();
+    driver = new ChromeDriverGenerator().getDriver();
   }
 
   @Test
@@ -28,7 +28,7 @@ public class GoogleSearchTest {
   }
 
   @AfterClass
-  public void tearDown(){
+  public void tearDown() {
     driver.close();
   }
 }

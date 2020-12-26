@@ -2,7 +2,7 @@ package com.learning.excel;
 
 import static com.learning.excel.ExcelTest.EXCEL_FILE_NAME;
 
-import com.learning.pages.ChromeDriverGenerator;
+import com.learning.browsers.ChromeDriverGenerator;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class ExcelDataProvider {
 
   @BeforeSuite
   void driverSetUp() {
-    driver = new ChromeDriverGenerator().getChromeDriver();
+    driver = new ChromeDriverGenerator().getDriver();
   }
 
   @SneakyThrows

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class GoogleSearchPage {
 
+  public static final String GOOGLE_URL = "https://google.com";
+
   public static WebElement getGoogleSearchTextBox(WebDriver driver) {
     return driver.findElement(By.name("q"));
   }

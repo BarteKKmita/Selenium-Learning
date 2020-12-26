@@ -2,7 +2,7 @@ package com.learning;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.learning.pages.ChromeDriverGenerator;
+import com.learning.browsers.ChromeDriverGenerator;
 import com.learning.pages.GoogleSearchPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +17,7 @@ public class FirstSeleniumTest {
 
   @BeforeTest
   public void setUp() {
-    driver = new ChromeDriverGenerator().getChromeDriver();
+    driver = new ChromeDriverGenerator().getDriver();
   }
 
   @Test
