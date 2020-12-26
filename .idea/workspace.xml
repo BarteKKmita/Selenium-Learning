@@ -26,11 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/ExcelDataProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/GetDataFromExcelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/SheetWorkbookHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/listeners/ListenerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/listeners/TestNGListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/pages/ExcelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/excel/ExcelTest.java" afterDir="false" />
     </list>
     <list id="abb05633-97fe-4ff2-a4ec-097699b02764" name="testcomit" comment="">
       <change beforePath="$PROJECT_DIR$/data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data.xlsx" afterDir="false" />
@@ -78,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Baedeung turtiorials/tutorials/guice/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -89,7 +87,7 @@
       <recent name="C:\Users\Bartek\Desktop\Java\Selenium learning" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ExcelDataProvider">
+  <component name="RunManager" selected="TestNG.ListenerTest">
     <configuration name="C:/Users/Bartek/Desktop/Java/Selenium learning/testng.xml" type="TestNG" nameIsGenerated="true">
       <module name="Selenium learning" />
       <useClassPathOnly />
@@ -143,24 +141,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetDataFromExcelTest.shouldGetCellValue" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.excel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.learning.excel" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.excel.GetDataFromExcelTest" />
-      <option name="METHOD_NAME" value="shouldGetCellValue" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GetDataFromExcelTest.shouldThrowWhenGettingNotNumericDataAsNumeric" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <extension name="coverage">
@@ -173,6 +153,23 @@
       <option name="MAIN_CLASS_NAME" value="com.learning.excel.GetDataFromExcelTest" />
       <option name="METHOD_NAME" value="shouldThrowWhenGettingNotNumericDataAsNumeric" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListenerTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.listeners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning.listeners" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.listeners.ListenerTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -197,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ListenerTest" />
         <item itemvalue="TestNG.ExcelDataProvider" />
         <item itemvalue="TestNG.com.learning.excel" />
         <item itemvalue="TestNG.ExcelDataProvider.s" />
         <item itemvalue="TestNG.GetDataFromExcelTest.shouldThrowWhenGettingNotNumericDataAsNumeric" />
-        <item itemvalue="TestNG.GetDataFromExcelTest.shouldGetCellValue" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608892423469</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="First data provider">
+      <created>1608904390876</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608904390876</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,7 +320,8 @@
     <MESSAGE value="Add testing.xml" />
     <MESSAGE value="Add handling excel files" />
     <MESSAGE value="testcomit" />
-    <option name="LAST_COMMIT_MESSAGE" value="testcomit" />
+    <MESSAGE value="First data provider" />
+    <option name="LAST_COMMIT_MESSAGE" value="First data provider" />
   </component>
   <component name="WindowStateProjectService">
     <state x="508" y="15" key="#&lt;default&gt;" timestamp="1608819874473">
@@ -335,60 +340,68 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="320" y="78" key="#Project_Structure/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608892647777" />
-    <state x="614" y="174" key="#com.intellij.ide.util.MemberChooser" timestamp="1608901338024">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1608913905579">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="614" y="174" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1608901338024" />
-    <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608800729785" />
+    <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608913905579" />
     <state x="460" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608901531978">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="460" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1608901531978" />
-    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1608892422381">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="443" y="0" key="CommitChangelistDialog2" timestamp="1608904387985">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="443" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608825273162" />
+    <state x="443" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608904387985" />
     <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608892422381" />
     <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1608896499733">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="88" y="78" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1608825260261" />
     <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608896499733" />
-    <state width="1556" height="208" key="GridCell.Tab.0.bottom" timestamp="1608903360975">
+    <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1608925566643">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="208" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1608925566643" />
+    <state width="1556" height="255" key="GridCell.Tab.0.bottom" timestamp="1608926583985">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1556" height="255" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608926583985" />
     <state width="1636" height="289" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619437" />
-    <state width="1556" height="208" key="GridCell.Tab.0.center" timestamp="1608903360975">
+    <state width="1556" height="255" key="GridCell.Tab.0.center" timestamp="1608926583984">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="208" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state width="1556" height="255" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608926583984" />
     <state width="1636" height="289" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619437" />
-    <state width="1556" height="208" key="GridCell.Tab.0.left" timestamp="1608903360975">
+    <state width="1556" height="255" key="GridCell.Tab.0.left" timestamp="1608926583984">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="208" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state width="1556" height="255" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608926583984" />
     <state width="1636" height="289" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619436" />
-    <state width="1556" height="208" key="GridCell.Tab.0.right" timestamp="1608903360975">
+    <state width="1556" height="255" key="GridCell.Tab.0.right" timestamp="1608926583984">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="208" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608903360975" />
+    <state width="1556" height="255" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608926583984" />
     <state width="1636" height="289" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608898619437" />
-    <state width="1636" height="330" key="GridCell.Tab.1.bottom" timestamp="1608897584033">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1636" height="330" key="GridCell.Tab.1.bottom" timestamp="1608904516003">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608904516003" />
     <state width="1636" height="330" key="GridCell.Tab.1.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
-    <state width="1636" height="330" key="GridCell.Tab.1.center" timestamp="1608897584033">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1636" height="330" key="GridCell.Tab.1.center" timestamp="1608904516003">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1608904516003" />
     <state width="1636" height="330" key="GridCell.Tab.1.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
-    <state width="1636" height="330" key="GridCell.Tab.1.left" timestamp="1608897584033">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1636" height="330" key="GridCell.Tab.1.left" timestamp="1608904516003">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1608904516003" />
     <state width="1636" height="330" key="GridCell.Tab.1.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
-    <state width="1636" height="330" key="GridCell.Tab.1.right" timestamp="1608897584033">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1636" height="330" key="GridCell.Tab.1.right" timestamp="1608904516003">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1636" height="330" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1608904516003" />
     <state width="1636" height="330" key="GridCell.Tab.1.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897584033" />
     <state x="655" y="437" key="ReplaceDuplicatesPrompt" timestamp="1608897771826">
       <screen x="0" y="0" width="1680" height="1010" />
@@ -412,10 +425,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="687" y="418" key="VCS.ChangelistChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608896400279" />
-    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1608889340561">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="411" y="201" key="Vcs.Push.Dialog.v2" timestamp="1608904397560">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="411" y="201" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608825275565" />
+    <state x="411" y="201" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608904397560" />
     <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608889340561" />
     <state x="917" y="358" key="extract.method.dialog" timestamp="1608901835613">
       <screen x="0" y="0" width="1600" height="860" />
