@@ -2,26 +2,22 @@ package com.learning;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import com.learning.browsers.ChromeDriverGenerator;
+import com.learning.pages.GoogleSearchPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class FirstSeleniumTest {
 
-  private static WebDriver driver;
-  public static String chromeProfilePath = "C://Users//Bartek//AppData//Local//Google//Chrome/User Data";
+  private WebDriver driver;
 
-  @BeforeAll
-  static void setUp() {
-    System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("user-data-dir=" + chromeProfilePath);
-    driver = new ChromeDriver(options);
+  @BeforeTest
+  public void setUp() {
+    driver = new ChromeDriverGenerator().getDriver();
   }
 
   @Test
@@ -33,16 +29,16 @@ public class FirstSeleniumTest {
   @Test
   void shouldFindElementOnGoogleWebSite() {
     getGoogleWebsite();
-    WebElement googleSearch = getGoogleSearchTextBox();
-    WebElement searchButton = getSearchInGoogleBtn();
+    WebElement googleSearch = GoogleSearchPage.getGoogleSearchTextBox(driver);
+    WebElement searchButton = GoogleSearchPage.getSearchInGoogleBtn(driver);
     googleSearch.sendKeys("Getting grip on it! ");
     searchButton.submit();
   }
 
   @Test
-  void shouldFind11InputElementsOnGoogle() {
+  void shouldFind9InputElementsOnGoogle() {
     //Given
-    int expectedInputElements = 9;
+    int expectedInputElements = 8;
     //When
     getGoogleWebsite();
     int actualInputElements = driver.findElements(By.xpath("//input")).size();
@@ -54,15 +50,7 @@ public class FirstSeleniumTest {
     driver.get("https://google.com");
   }
 
-  private WebElement getGoogleSearchTextBox() {
-    return driver.findElement(By.name("q"));
-  }
-
-  private WebElement getSearchInGoogleBtn() {
-    return driver.findElement(By.name("btnK"));
-  }
-
-  @AfterEach
+  @AfterClass
   void tearDown() {
     driver.close();
     driver.quit();
