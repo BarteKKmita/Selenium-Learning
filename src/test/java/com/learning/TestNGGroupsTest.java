@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Guice;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -26,7 +27,6 @@ public class TestNGGroupsTest {
   @BeforeSuite
   void setUp() {
     driver = browserDriver.getDriver();
-    System.out.println(driver.toString());
   }
 
   @Test(groups = {"sanity"})
@@ -34,7 +34,7 @@ public class TestNGGroupsTest {
     driver.get(GOOGLE_URL);
   }
 
-  @Test(groups = {"sanity"})
+  @Test(priority = 1)
   void test2() {
     System.out.println("This is test 2");
   }
@@ -53,8 +53,13 @@ public class TestNGGroupsTest {
 
   @Test(groups = {"sanity"})
   @Parameters({"MyParameters"})
-  void shouldGetPreparedParameters(String parameter) {
+  void shouldGetPreparedParameters(@Optional String parameter) {
     System.out.println(parameter);
+  }
+
+  @Test(dependsOnGroups = {"sanity"})
+  void shouldRunSanitysGroupTestsFirst(){
+    System.out.println("I am running lastly");
   }
 
   @AfterSuite
