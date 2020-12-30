@@ -50,7 +50,7 @@ public class FirstSeleniumTest {
     driver.get("https://google.com");
   }
 
-  @AfterClass
+  @AfterClass(alwaysRun = true)
   void tearDown() {
     driver.close();
     driver.quit();

@@ -27,7 +27,7 @@ public class GoogleSearchTest {
     searchTextBox.sendKeys(Keys.ENTER);
   }
 
-  @AfterClass
+  @AfterClass(alwaysRun = true)
   public void tearDown() {
     driver.close();
   }

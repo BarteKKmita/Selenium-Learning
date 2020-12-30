@@ -62,7 +62,7 @@ public class TestNGGroupsTest {
     System.out.println("I am running lastly");
   }
 
-  @AfterSuite
+  @AfterSuite(alwaysRun = true)
   void tearDown() {
     driver.close();
     driver.quit();

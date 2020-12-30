@@ -8,6 +8,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.learning.browsers.ChromeDriverGenerator;
 import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -46,8 +47,13 @@ public class ExtentReportsTest {
     testCase.addScreenCaptureFromPath("screenshot.png");
   }
 
-  @AfterSuite
+  @AfterSuite(alwaysRun = true)
   public void tearDown() {
     extentReports.flush();
+  }
+
+  @AfterClass(alwaysRun = true)
+  public void tearDownClass() {
+    chromeDriver.quit();
   }
 }
