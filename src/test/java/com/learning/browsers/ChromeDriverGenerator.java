@@ -2,26 +2,17 @@ package com.learning.browsers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ChromeDriverGenerator implements BrowserDriver {
 
   private final WebDriver driver;
-  public static final String CHROME_USER_DATA = "C://Users//Bartek//AppData//Local//Google//Chrome//User Data";
 
   public ChromeDriverGenerator() {
-    driver = new ChromeDriver(getChromeOptions());
+    System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+    driver = new ChromeDriver();
   }
 
   public WebDriver getDriver() {
     return driver;
-  }
-
-  private ChromeOptions getChromeOptions() {
-    System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("user-data-dir=" + CHROME_USER_DATA);
-    options.addArguments("profile-directory=Profile 1");
-    return options;
   }
 }
