@@ -20,16 +20,16 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:Tutorials-AutomationStepByStep" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:SwagLabsTests" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ede94b81-adb6-4c93-b03f-e1fbb44c7b10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/FluentWaitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/TestNGGroupsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/TestNGGroupsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/pages/GoogleSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/GoogleSearchPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/SwagLabsLoginPageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/learning/pages/SwagLabsLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/learning/browsers/ChromeDriverGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/learning/browsers/ChromeDriverGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Tutorials-AutomationStepByStep" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,7 +90,7 @@
       <recent name="C:\Users\Bartek\Desktop\Java\Selenium learning" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FluentWaitTest">
+  <component name="RunManager" selected="TestNG.SwagLabsLoginPageTest">
     <configuration name="C:/Users/Bartek/Desktop/Java/Selenium learning/testng.xml" type="TestNG" nameIsGenerated="true">
       <module name="Selenium learning" />
       <useClassPathOnly />
@@ -100,6 +100,7 @@
       <option name="METHOD_NAME" value="" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea -ea -Dtestng.dtd.http=true" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="PROPERTIES_FILE" value="" />
@@ -109,18 +110,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/Bartek/Desktop/Java/Selenium learning/testnggroupstest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ExcelDataProvider.shouldPutDataIntoWebsite" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <useClassPathOnly />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testnggroupstest.xml" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.excel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.learning.excel" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.excel.ExcelDataProvider" />
+      <option name="METHOD_NAME" value="shouldPutDataIntoWebsite" />
       <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -ea -Dtestng.dtd.http=true" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
       <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
@@ -142,34 +152,6 @@
       <option name="MAIN_CLASS_NAME" value="com.learning.pages.FluentWaitTest" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FluentWaitTest.shouldNotBeNullWhenInjected" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.learning.pages" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.pages.FluentWaitTest" />
-      <option name="METHOD_NAME" value="shouldNotBeNullWhenInjected" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
@@ -210,6 +192,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SwagLabsLoginPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.learning" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.SwagLabsLoginPageTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwagLabsLoginPageTest.shouldErrorMessageBeVisibleWhenUnsuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.learning" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.SwagLabsLoginPageTest" />
+      <option name="METHOD_NAME" value="shouldErrorMessageBeVisibleWhenUnsuccessfulLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwagLabsLoginPageTest.shouldGoToShopPageWhenSuccessfulLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Selenium learning" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.learning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.learning" />
+      <option name="MAIN_CLASS_NAME" value="com.learning.SwagLabsLoginPageTest" />
+      <option name="METHOD_NAME" value="shouldGoToShopPageWhenSuccessfulLogin" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestNGGroupsTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Selenium learning" />
       <extension name="coverage">
@@ -227,49 +282,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestNGGroupsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Selenium learning" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learning.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.learning" />
-      <option name="MAIN_CLASS_NAME" value="com.learning.TestNGGroupsTest" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="TestNG.GoogleSearchTest" />
       <item itemvalue="TestNG.C:/Users/Bartek/Desktop/Java/Selenium learning/testng.xml" />
-      <item itemvalue="TestNG.TestNGGroupsTest" />
-      <item itemvalue="TestNG.C:/Users/Bartek/Desktop/Java/Selenium learning/testnggroupstest.xml" />
       <item itemvalue="TestNG.TestNGGroupsTest (1)" />
-      <item itemvalue="TestNG.FluentWaitTest.shouldNotBeNullWhenInjected" />
       <item itemvalue="TestNG.FluentWaitTest" />
+      <item itemvalue="TestNG.SwagLabsLoginPageTest.shouldGoToShopPageWhenSuccessfulLogin" />
+      <item itemvalue="TestNG.SwagLabsLoginPageTest" />
+      <item itemvalue="TestNG.SwagLabsLoginPageTest.shouldErrorMessageBeVisibleWhenUnsuccessfulLogin" />
+      <item itemvalue="TestNG.ExcelDataProvider.shouldPutDataIntoWebsite" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SwagLabsLoginPageTest" />
+        <item itemvalue="TestNG.ExcelDataProvider.shouldPutDataIntoWebsite" />
+        <item itemvalue="TestNG.SwagLabsLoginPageTest.shouldErrorMessageBeVisibleWhenUnsuccessfulLogin" />
+        <item itemvalue="TestNG.SwagLabsLoginPageTest.shouldGoToShopPageWhenSuccessfulLogin" />
         <item itemvalue="TestNG.FluentWaitTest" />
-        <item itemvalue="TestNG.FluentWaitTest.shouldNotBeNullWhenInjected" />
-        <item itemvalue="TestNG.TestNGGroupsTest" />
-        <item itemvalue="TestNG.C:/Users/Bartek/Desktop/Java/Selenium learning/testnggroupstest.xml" />
-        <item itemvalue="TestNG.TestNGGroupsTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -375,7 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609002750636</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add groups">
+      <created>1609256584212</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609256584213</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Repair closing driver">
+      <created>1609351060368</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609351060369</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +432,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Tutorials-AutomationStepByStep" />
+                        <option value="SwagLabsTests" />
                       </list>
                     </value>
                   </entry>
@@ -414,7 +457,9 @@
     <MESSAGE value="testcomit" />
     <MESSAGE value="TestNGListeners" />
     <MESSAGE value="Add dependency injection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dependency injection" />
+    <MESSAGE value="Add groups" />
+    <MESSAGE value="Repair closing driver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repair closing driver" />
   </component>
   <component name="WindowStateProjectService">
     <state x="508" y="15" key="#&lt;default&gt;" timestamp="1608819874473">
@@ -437,10 +482,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="548" y="104" key="#TestNGGroupsTest_(1)/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609001810276" />
-    <state x="294" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609008732913">
+    <state x="294" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609265520285">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="294" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609008732913" />
+    <state x="294" y="158" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609265520285" />
     <state x="645" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1608977452544">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -450,40 +495,40 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="460" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1608901531978" />
-    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1609002748777">
+    <state x="465" y="72" key="CommitChangelistDialog2" timestamp="1609351055160">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="443" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1608904387985" />
-    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609002748777" />
-    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1609002729809">
+    <state x="465" y="72" key="CommitChangelistDialog2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609351055160" />
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog" timestamp="1609256568578">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="88" y="78" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1608825260261" />
-    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609002729809" />
+    <state x="92" y="92" width="1496" height="826" key="DiffContextDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609256568578" />
     <state x="580" y="183" key="FileChooserDialogImpl" timestamp="1608925566643">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="183" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1608925566643" />
-    <state width="1636" height="363" key="GridCell.Tab.0.bottom" timestamp="1609018869644">
+    <state width="1636" height="363" key="GridCell.Tab.0.bottom" timestamp="1609350538093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1556" height="255" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1608926583985" />
-    <state width="1636" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609018869644" />
-    <state width="1636" height="363" key="GridCell.Tab.0.center" timestamp="1609018869644">
+    <state width="1636" height="363" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1609272147660" />
+    <state width="1636" height="363" key="GridCell.Tab.0.bottom/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609350538093" />
+    <state width="1636" height="363" key="GridCell.Tab.0.center" timestamp="1609350538093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1556" height="255" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1608926583984" />
-    <state width="1636" height="363" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609018869644" />
-    <state width="1636" height="363" key="GridCell.Tab.0.left" timestamp="1609018869644">
+    <state width="1636" height="363" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1609272147660" />
+    <state width="1636" height="363" key="GridCell.Tab.0.center/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609350538093" />
+    <state width="1636" height="363" key="GridCell.Tab.0.left" timestamp="1609350538093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1556" height="255" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1608926583984" />
-    <state width="1636" height="363" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609018869644" />
-    <state width="1636" height="363" key="GridCell.Tab.0.right" timestamp="1609018869644">
+    <state width="1636" height="363" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1609272147660" />
+    <state width="1636" height="363" key="GridCell.Tab.0.left/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609350538093" />
+    <state width="1636" height="363" key="GridCell.Tab.0.right" timestamp="1609350538093">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1556" height="255" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1608926583984" />
-    <state width="1636" height="363" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609018869644" />
+    <state width="1636" height="363" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1609272147660" />
+    <state width="1636" height="363" key="GridCell.Tab.0.right/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609350538093" />
     <state width="1636" height="330" key="GridCell.Tab.1.bottom" timestamp="1608904516003">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -508,41 +553,49 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="655" y="437" key="ReplaceDuplicatesPrompt/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608897771826" />
-    <state x="563" y="154" key="RollbackChangesDialog" timestamp="1608999470421">
+    <state x="563" y="154" key="RollbackChangesDialog" timestamp="1609265557356">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="536" y="131" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1608818538609" />
-    <state x="563" y="154" key="RollbackChangesDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608999470421" />
-    <state x="341" y="135" key="SettingsEditor" timestamp="1608999335055">
+    <state x="563" y="154" key="RollbackChangesDialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609265557356" />
+    <state x="341" y="135" key="SettingsEditor" timestamp="1609348225977">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="325" y="115" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1608819902271" />
-    <state x="341" y="135" key="SettingsEditor/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608999335055" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1608981051637">
+    <state x="341" y="135" key="SettingsEditor/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609348225977" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1609264523067">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608981051637" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609264523067" />
     <state x="687" y="418" key="VCS.ChangelistChooser" timestamp="1608896400279">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="687" y="418" key="VCS.ChangelistChooser/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608896400279" />
-    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1609002754794">
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2" timestamp="1609351063173">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="411" y="201" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1608904397560" />
-    <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609002754794" />
-    <state x="963" y="449" key="extract.method.dialog" timestamp="1608986963255">
+    <state x="432" y="236" key="Vcs.Push.Dialog.v2/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609351063173" />
+    <state x="963" y="449" key="extract.method.dialog" timestamp="1609261473406">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="917" y="358" key="extract.method.dialog/0.0.1600.860@0.0.1600.860" timestamp="1608901835613" />
-    <state x="963" y="449" key="extract.method.dialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608986963255" />
+    <state x="963" y="449" key="extract.method.dialog/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609261473406" />
+    <state x="547" y="238" width="585" height="534" key="find.popup" timestamp="1609265456523">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="547" y="238" width="585" height="534" key="find.popup/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609265456523" />
     <state x="595" y="176" key="refactoring.ChangeSignatureDialog" timestamp="1608901580039">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="595" y="176" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1608901580039" />
-    <state x="503" y="217" width="672" height="160" key="search.everywhere.popup" timestamp="1608998876247">
+    <state x="496" y="227" key="run.anything.popup" timestamp="1609264856435">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="503" y="217" width="672" height="160" key="search.everywhere.popup/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1608998876247" />
+    <state x="496" y="227" key="run.anything.popup/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609264856435" />
+    <state x="503" y="217" width="672" height="160" key="search.everywhere.popup" timestamp="1609257973540">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="503" y="217" width="672" height="160" key="search.everywhere.popup/0.0.1680.1010/1680.0.1600.860@0.0.1680.1010" timestamp="1609257973540" />
   </component>
 </project>
