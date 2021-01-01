@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="1" parent-module="com.learning.browsers.DriverModule" name="test">
+    <test  name="test">
+        <parameter name="MyParameters" value="Parameter from testng.xml file"/>
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.learning.pages.google.TestNGGroupsTest"/>
+        </classes>
+    </test>
+</suite>
