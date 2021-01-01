@@ -3,6 +3,7 @@ package com.learning.excel;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import lombok.SneakyThrows;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -16,9 +17,8 @@ public class ExcelTest {
   private XSSFWorkbook excelWorkbook;
   public static final String EXCEL_FILE_NAME = "data.xlsx";
 
-  @SneakyThrows
   @Test
-  void shouldEditExcelFile() {
+  void shouldEditExcelFile() throws IOException {
     try (FileInputStream excelFile = new FileInputStream(new File(EXCEL_FILE_NAME))) {
       excelWorkbook = new XSSFWorkbook(excelFile);
       Sheet excelSheet = getFirstSheet();
@@ -43,8 +43,7 @@ public class ExcelTest {
     cell.setAsActiveCell();
   }
 
-  @SneakyThrows
-  private void saveChangesInExcelFile(XSSFWorkbook workbook) {
+  private void saveChangesInExcelFile(XSSFWorkbook workbook) throws IOException {
     try (FileOutputStream out = new FileOutputStream(new File("data.xlsx"))) {
       workbook.write(out);
       out.close();

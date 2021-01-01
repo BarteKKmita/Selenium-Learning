@@ -2,15 +2,15 @@ package com.learning.excel;
 
 import static com.learning.excel.ExcelTest.EXCEL_FILE_NAME;
 
-import com.learning.browsers.ChromeDriverGenerator;
+import com.learning.browsers.BrowserDriverGenerator;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import lombok.SneakyThrows;
+import java.util.concurrent.TimeUnit;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
@@ -30,16 +30,15 @@ public class ExcelDataProvider {
 
   @BeforeSuite
   void driverSetUp() {
-    driver = new ChromeDriverGenerator().getDriver();
+    driver = new BrowserDriverGenerator().getDriver();
   }
 
-  @SneakyThrows
   @Test(dataProvider = "firstDataProvider")
-  void shouldPutDataIntoWebsite(String username, String password) {
+  void shouldPutDataIntoWebsite(String username, String password) throws InterruptedException {
     driver.get("https://opensource-demo.orangehrmlive.com/");
     driver.findElement(By.name("txtUsername")).sendKeys(username);
     driver.findElement(By.name("txtPassword")).sendKeys(username);
-    Thread.sleep(1000);
+    driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
   }
 
   @DataProvider(name = "firstDataProvider")
@@ -55,7 +54,7 @@ public class ExcelDataProvider {
     return data;
   }
 
-  @AfterSuite
+  @AfterClass(alwaysRun = true)
   void tearDown() {
     driver.close();
     driver.quit();

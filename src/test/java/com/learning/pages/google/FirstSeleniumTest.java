@@ -1,23 +1,36 @@
-package com.learning;
+package com.learning.pages.google;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.testng.Assert.assertEquals;
 
-import com.learning.browsers.ChromeDriverGenerator;
-import com.learning.pages.GoogleSearchPage;
+import com.google.inject.Inject;
+import com.learning.browsers.BrowserDriver;
+import com.learning.browsers.DriverModule;
+import com.learning.configuration.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
+
+@Guice(modules = DriverModule.class)
 public class FirstSeleniumTest {
 
+  @Inject
+  private PropertiesReader propertiesReader;
+  @Inject
+  private BrowserDriver browserDriver;
+
+
   private WebDriver driver;
+  private GoogleSearchPage googleSearchPage;
 
   @BeforeTest
   public void setUp() {
-    driver = new ChromeDriverGenerator().getDriver();
+    driver = browserDriver.getDriver();
+    googleSearchPage = new GoogleSearchPage(driver, propertiesReader);
   }
 
   @Test
@@ -29,8 +42,8 @@ public class FirstSeleniumTest {
   @Test
   void shouldFindElementOnGoogleWebSite() {
     getGoogleWebsite();
-    WebElement googleSearch = GoogleSearchPage.getGoogleSearchTextBox(driver);
-    WebElement searchButton = GoogleSearchPage.getSearchInGoogleBtn(driver);
+    WebElement googleSearch = googleSearchPage.getGoogleSearchTextBox(driver);
+    WebElement searchButton = googleSearchPage.getSearchInGoogleBtn(driver);
     googleSearch.sendKeys("Getting grip on it! ");
     searchButton.submit();
   }
@@ -47,7 +60,7 @@ public class FirstSeleniumTest {
   }
 
   private void getGoogleWebsite() {
-    driver.get("https://google.com");
+    driver.get(googleSearchPage.getGoogleURL());
   }
 
   @AfterClass(alwaysRun = true)
