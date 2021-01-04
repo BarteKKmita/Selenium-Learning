@@ -3,8 +3,8 @@ package com.learning.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public abstract class BasePage {
-  public BasePage(WebDriver driver) {
+public abstract class PageBase {
+  public PageBase(WebDriver driver) {
     PageFactory.initElements(driver, this);
   }
 

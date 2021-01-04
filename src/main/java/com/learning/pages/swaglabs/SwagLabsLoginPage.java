@@ -1,14 +1,14 @@
 package com.learning.pages.swaglabs;
 
 import com.learning.configuration.PropertiesReader;
-import com.learning.pages.BasePage;
+import com.learning.pages.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SwagLabsLoginPage extends BasePage {
+public class SwagLabsLoginPage extends PageBase {
 
 
   private final PropertiesReader propertiesReader;
