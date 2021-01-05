@@ -15,7 +15,7 @@ public class PropertiesReader {
   private final String pathToFile;
 
   public PropertiesReader() {
-    pathToFile = "src/main/resources/application-properties.yaml";
+    pathToFile = "src/main/resources/testProperties.yaml";
   }
 
   public String getProperty(String property) {

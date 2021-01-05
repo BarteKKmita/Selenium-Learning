@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SwagLabsLoginPage extends PageBase {
 
-
   private final PropertiesReader propertiesReader;
   private static final String SWAGLABS_URL_PROPERTIES_NAME = "swagLabsURL";
 

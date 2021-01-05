@@ -18,7 +18,6 @@ public class SwagLabsLoginPageTest {
 
   @Inject
   private BrowserDriver browserDriver;
-
   @Inject
   private PropertiesReader propertiesReader;
 
