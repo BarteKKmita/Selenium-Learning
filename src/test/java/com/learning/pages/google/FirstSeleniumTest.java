@@ -23,7 +23,6 @@ public class FirstSeleniumTest {
   @Inject
   private BrowserDriver browserDriver;
 
-
   private WebDriver driver;
   private GoogleSearchPage googleSearchPage;
 
