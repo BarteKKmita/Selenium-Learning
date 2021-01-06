@@ -1,11 +1,11 @@
 package com.learning.pages.swaglabs;
 
+import com.learning.pages.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class SwagLabsInventory {
+public class SwagLabsInventory extends PageBase {
 
   public static final String INVENTORY_PAGE_URL = "https://www.saucedemo.com/inventory.html";
 
@@ -15,7 +15,12 @@ public class SwagLabsInventory {
   private WebElement addToCartButton;
 
   public SwagLabsInventory(WebDriver driver) {
-    PageFactory.initElements(driver, this);
+    super(driver);
+  }
+
+  @Override
+  public boolean waitForPageToLoad() {
+    return true;
   }
 
   public void performAddToCart() {
