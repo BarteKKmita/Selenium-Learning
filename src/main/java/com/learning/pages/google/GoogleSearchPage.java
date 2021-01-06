@@ -2,6 +2,7 @@ package com.learning.pages.google;
 
 import com.learning.configuration.PropertiesReader;
 import com.learning.pages.PageBase;
+import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +13,6 @@ public class GoogleSearchPage extends PageBase {
 
   @FindBy(name = "q")
   private WebElement searchBox;
-
   @FindBy(name = "btnK")
   private WebElement searchButton;
 
@@ -33,18 +33,20 @@ public class GoogleSearchPage extends PageBase {
     searchButton.submit();
   }
 
-  public WebElement getGoogleSearchTextBox(WebDriver driver) {
+  public WebElement getGoogleSearchTextBox() {
     return searchBox;
   }
 
-  public WebElement getSearchInGoogleBtn(WebDriver driver) {
+  public WebElement getSearchInGoogleBtn() {
     return searchButton;
   }
 
   @Override
-  public void waitForPageToLoad(WebDriver driver) {
-    WebDriverWait wait = new WebDriverWait(driver, 5);
-    wait.until(ExpectedConditions
-        .visibilityOfAllElements(searchBox, searchButton));
+  public boolean waitForPageToLoad() {
+    WebDriverWait wait = new WebDriverWait(driver, 10);
+    return wait.until(ExpectedConditions
+        .visibilityOfAllElements(searchBox, searchButton))
+        .stream()
+        .allMatch(Objects::nonNull);
   }
 }

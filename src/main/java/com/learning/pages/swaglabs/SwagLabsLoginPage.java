@@ -2,6 +2,7 @@ package com.learning.pages.swaglabs;
 
 import com.learning.configuration.PropertiesReader;
 import com.learning.pages.PageBase;
+import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,13 +16,10 @@ public class SwagLabsLoginPage extends PageBase {
 
   @FindBy(id = "user-name")
   private WebElement usernameTextBox;
-
   @FindBy(id = "password")
   private WebElement passwordTextBox;
-
   @FindBy(tagName = "h3")
   private WebElement errorButton;
-
   @FindBy(css = "input#login-button")
   private WebElement loginButton;
 
@@ -45,10 +43,12 @@ public class SwagLabsLoginPage extends PageBase {
   }
 
   @Override
-  public void waitForPageToLoad(WebDriver driver) {
+  public boolean waitForPageToLoad() {
     WebDriverWait wait = new WebDriverWait(driver, 5);
-    wait.until(ExpectedConditions
+    return wait.until(ExpectedConditions
         .visibilityOfAllElements(usernameTextBox, passwordTextBox,
-            loginButton));
+            loginButton))
+        .stream()
+        .allMatch(Objects::nonNull);
   }
 }
