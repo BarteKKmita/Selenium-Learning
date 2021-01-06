@@ -3,42 +3,26 @@ package com.learning.pages.swaglabs;
 import static org.testng.Assert.assertEquals;
 
 import com.google.inject.Inject;
-import com.learning.browsers.BrowserDriver;
-import com.learning.browsers.DriverModule;
-import com.learning.configuration.PropertiesReader;
-import org.openqa.selenium.WebDriver;
+import com.learning.ApplicationModule;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
-@Guice(modules = DriverModule.class)
+@Guice(modules = ApplicationModule.class)
 public class SwagLabsLoginPageTest {
 
   @Inject
-  private BrowserDriver browserDriver;
-  @Inject
-  private PropertiesReader propertiesReader;
-
-  private WebDriver driver;
   private SwagLabsLoginPage swagLabsLoginPage;
-
-  @BeforeClass
-  void setUp() {
-    driver = browserDriver.getDriver();
-    swagLabsLoginPage = new SwagLabsLoginPage(driver, propertiesReader);
-  }
 
   @Test(dataProvider = "successfulLoginData")
   void shouldGoToShopPageWhenSuccessfulLogin(String username, String password) {
     //Given
     String expectedPageUrl = "https://www.saucedemo.com/inventory.html";
     //When
-    driver.get(swagLabsLoginPage.getSwagLabsURL());
-    waitForPageToLoad();
+    swagLabsLoginPage.openSwagLabsWebsite();
     swagLabsLoginPage.performLogin(username, password);
-    String actualPageUrl = driver.getCurrentUrl();
+    String actualPageUrl = swagLabsLoginPage.getCurrentUrl();
     //Then
     assertEquals(actualPageUrl, expectedPageUrl);
   }
@@ -48,7 +32,7 @@ public class SwagLabsLoginPageTest {
     //Given
     String expectedErrorMessage = "Epic sadface: Username and password do not match any user in this service";
     //When
-    driver.get(swagLabsLoginPage.getSwagLabsURL());
+    swagLabsLoginPage.openSwagLabsWebsite();
     swagLabsLoginPage.performLogin(username, password);
     String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
@@ -60,7 +44,7 @@ public class SwagLabsLoginPageTest {
     //Given
     String expectedErrorMessage = "Epic sadface: Password is required";
     //When
-    driver.get(swagLabsLoginPage.getSwagLabsURL());
+    swagLabsLoginPage.openSwagLabsWebsite();
     swagLabsLoginPage.performLogin(username, "");
     String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
@@ -72,8 +56,7 @@ public class SwagLabsLoginPageTest {
     //Given
     String expectedErrorMessage = "Epic sadface: Username is required";
     //When
-    driver.get(swagLabsLoginPage.getSwagLabsURL());
-    waitForPageToLoad();
+    swagLabsLoginPage.openSwagLabsWebsite();
     swagLabsLoginPage.performLogin("", password);
     String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
@@ -97,12 +80,8 @@ public class SwagLabsLoginPageTest {
     };
   }
 
-  private void waitForPageToLoad() {
-    swagLabsLoginPage.waitForPageToLoad(driver);
-  }
-
   @AfterClass(alwaysRun = true)
   void tearDown() {
-    driver.quit();
+    swagLabsLoginPage.close();
   }
 }
