@@ -2,7 +2,6 @@ package com.learning.pages.google;
 
 import com.learning.configuration.PropertiesReader;
 import com.learning.pages.PageBase;
-import java.util.Collection;
 import java.util.Objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,6 +27,7 @@ public class GoogleSearchPage extends PageBase {
 
   public void openGoogleWebsite(){
     driver.get(getGoogleURL());
+    waitForPageToLoad();
   }
 
   public void searchGoogle(String searchPhrase) {
@@ -47,13 +47,13 @@ public class GoogleSearchPage extends PageBase {
   public boolean waitForPageToLoad() {
     WebDriverWait wait = new WebDriverWait(driver, 10);
     return wait.until(ExpectedConditions
-        .visibilityOfAllElements(searchBox))
+        .visibilityOfAllElements(searchBox,searchButton))
         .stream()
         .allMatch(Objects::nonNull);
   }
 
-  public Collection<WebElement> findElements(By by) {
-    return driver.findElements(by);
+  public int getAllInputsCount() {
+    return driver.findElements(By.xpath("//input")).size();
   }
 
   private String getGoogleURL() {

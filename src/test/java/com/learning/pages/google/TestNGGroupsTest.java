@@ -1,39 +1,22 @@
 package com.learning.pages.google;
 
 import com.google.inject.Inject;
-import com.learning.browsers.BrowserDriver;
-import com.learning.browsers.DriverModule;
-import com.learning.configuration.PropertiesReader;
-import org.openqa.selenium.WebDriver;
+import com.learning.ApplicationModule;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-@Guice(modules = DriverModule.class)
+@Guice(modules = ApplicationModule.class)
 public class TestNGGroupsTest {
 
   @Inject
-  private BrowserDriver browserDriver;
-
-  @Inject
-  private PropertiesReader propertiesReader;
-
-  private WebDriver driver;
   private GoogleSearchPage googleSearchPage;
-
-
-  @BeforeSuite
-  void setUp() {
-    driver = browserDriver.getDriver();
-    googleSearchPage = new GoogleSearchPage(driver, propertiesReader);
-  }
 
   @Test(groups = {"sanity"})
   void shouldGoToGoogle() {
-    driver.get(googleSearchPage.getGoogleURL());
+    googleSearchPage.openGoogleWebsite();
   }
 
   @Test(priority = 1)
@@ -46,11 +29,6 @@ public class TestNGGroupsTest {
     System.out.println("This is test 3");
   }
 
-  @Test(groups = {"smoke"})
-  void shouldGoToPaniodprogramowania() {
-    driver.get("https://paniodprogramowania.pl/");
-    System.out.println("Looking at paniodprogramowania.");
-  }
 
   @Test(groups = {"sanity"})
   @Parameters({"MyParameters"})
@@ -65,7 +43,6 @@ public class TestNGGroupsTest {
 
   @AfterSuite(alwaysRun = true)
   void tearDown() {
-    driver.close();
-    driver.quit();
+    googleSearchPage.close();
   }
 }

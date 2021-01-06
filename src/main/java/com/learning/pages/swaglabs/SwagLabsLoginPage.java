@@ -28,8 +28,9 @@ public class SwagLabsLoginPage extends PageBase {
     this.propertiesReader = propertiesReader;
   }
 
-  public String getSwagLabsURL() {
-    return propertiesReader.getProperty(SWAGLABS_URL_PROPERTIES_NAME);
+  public void openSwagLabsWebsite() {
+    driver.get(getSwagLabsURL());
+    waitForPageToLoad();
   }
 
   public void performLogin(String username, String password) {
@@ -50,5 +51,13 @@ public class SwagLabsLoginPage extends PageBase {
             loginButton))
         .stream()
         .allMatch(Objects::nonNull);
+  }
+
+  private String getSwagLabsURL() {
+    return propertiesReader.getProperty(SWAGLABS_URL_PROPERTIES_NAME);
+  }
+
+  public String getCurrentUrl() {
+    return driver.getCurrentUrl();
   }
 }
