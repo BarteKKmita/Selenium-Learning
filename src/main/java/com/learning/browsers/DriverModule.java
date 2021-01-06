@@ -5,21 +5,22 @@ import com.google.inject.PrivateModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.learning.configuration.PropertiesReader;
+import org.openqa.selenium.WebDriver;
 
 public class DriverModule extends PrivateModule {
 
   @Provides
   @Exposed
   @Singleton
-  public PropertiesReader generateReader() {
+  public PropertiesReader providePropertiesReader() {
     return new PropertiesReader();
   }
 
   @Provides
   @Exposed
   @Singleton
-  public BrowserDriverGenerator generate(PropertiesReader propertiesReader) {
-    return new BrowserDriverGenerator(propertiesReader);
+  public WebDriver provideWebDriver(PropertiesReader propertiesReader) {
+    return new WebDriverFactory(propertiesReader).getWebDriver();
   }
 
   @Override
