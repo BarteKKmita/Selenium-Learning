@@ -1,6 +1,8 @@
 package com.learning.browsers;
 
 import com.learning.configuration.PropertiesReader;
+import com.netflix.governator.annotations.AutoBind;
+import javax.annotation.PreDestroy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -32,6 +34,12 @@ public class WebDriverFactory {
     } else {
       throw new BrowserNotSupportedException("Unknown browser.");
     }
+  }
+
+  @PreDestroy
+  public void closeBrowser(){
+    webDriver.close();
+    webDriver.quit();
   }
 }
 
