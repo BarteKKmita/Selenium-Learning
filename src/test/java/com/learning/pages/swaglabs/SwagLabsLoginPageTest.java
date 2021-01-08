@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import com.google.inject.Inject;
 import com.learning.ApplicationModule;
+import com.learning.browsers.Browser;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Guice;
@@ -13,6 +14,9 @@ import org.testng.annotations.Test;
 public class SwagLabsLoginPageTest {
 
   @Inject
+  private Browser browser;
+
+  @Inject
   private SwagLabsLoginPage swagLabsLoginPage;
 
   @Test(dataProvider = "successfulLoginData")
@@ -20,9 +24,9 @@ public class SwagLabsLoginPageTest {
     //Given
     String expectedPageUrl = "https://www.saucedemo.com/inventory.html";
     //When
-    swagLabsLoginPage.openSwagLabsWebsite();
+    swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, password);
-    String actualPageUrl = swagLabsLoginPage.getCurrentUrl();
+    String actualPageUrl = browser.getCurrentPageURL();
     //Then
     assertEquals(actualPageUrl, expectedPageUrl);
   }
@@ -32,7 +36,7 @@ public class SwagLabsLoginPageTest {
     //Given
     String expectedErrorMessage = "Epic sadface: Username and password do not match any user in this service";
     //When
-    swagLabsLoginPage.openSwagLabsWebsite();
+    swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, password);
     String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
@@ -44,7 +48,7 @@ public class SwagLabsLoginPageTest {
     //Given
     String expectedErrorMessage = "Epic sadface: Password is required";
     //When
-    swagLabsLoginPage.openSwagLabsWebsite();
+    swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, "");
     String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
@@ -56,7 +60,7 @@ public class SwagLabsLoginPageTest {
     //Given
     String expectedErrorMessage = "Epic sadface: Username is required";
     //When
-    swagLabsLoginPage.openSwagLabsWebsite();
+    swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin("", password);
     String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then

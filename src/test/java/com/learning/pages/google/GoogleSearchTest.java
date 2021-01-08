@@ -15,9 +15,9 @@ public class GoogleSearchTest {
   @Test
   public void testGoogleSearch() {
     //Given
-    googleSearchPage.openGoogleWebsite();
+    googleSearchPage.open();
     //When
-    googleSearchPage.searchGoogle("Simodrive launch");
+    googleSearchPage.search("Simodrive launch");
   }
 
   @AfterClass(alwaysRun = true)
