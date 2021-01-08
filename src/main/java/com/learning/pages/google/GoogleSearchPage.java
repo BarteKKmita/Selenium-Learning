@@ -25,22 +25,14 @@ public class GoogleSearchPage extends PageBase {
     this.propertiesReader = propertiesReader;
   }
 
-  public void openGoogleWebsite(){
-    driver.get(getGoogleURL());
+  public void open(){
+    driver.get(getURL());
     waitForPageToLoad();
   }
 
-  public void searchGoogle(String searchPhrase) {
+  public void search(String searchPhrase) {
     searchBox.sendKeys(searchPhrase);
     searchButton.submit();
-  }
-
-  public WebElement getGoogleSearchTextBox() {
-    return searchBox;
-  }
-
-  public WebElement getSearchInGoogleBtn() {
-    return searchButton;
   }
 
   @Override
@@ -56,7 +48,7 @@ public class GoogleSearchPage extends PageBase {
     return driver.findElements(By.xpath("//input")).size();
   }
 
-  private String getGoogleURL() {
+  private String getURL() {
     return propertiesReader.getProperty(GOOGLE_URL_PROPERTIES_NAME);
   }
 }

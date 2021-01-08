@@ -1,5 +1,6 @@
 package com.learning.browsers;
 
+import com.google.inject.AbstractModule;
 import com.google.inject.Exposed;
 import com.google.inject.PrivateModule;
 import com.google.inject.Provides;
@@ -7,7 +8,7 @@ import com.google.inject.Singleton;
 import com.learning.configuration.PropertiesReader;
 import org.openqa.selenium.WebDriver;
 
-public class DriverModule extends PrivateModule {
+public class DriverModule extends AbstractModule {
 
   @Provides
   @Exposed
@@ -19,11 +20,14 @@ public class DriverModule extends PrivateModule {
   @Provides
   @Exposed
   @Singleton
-  public WebDriver provideWebDriver(PropertiesReader propertiesReader) {
-    return new WebDriverFactory(propertiesReader).getWebDriver();
+  public Browser provideBrowser(PropertiesReader propertiesReader) {
+    return new Browser(propertiesReader);
   }
 
-  @Override
-  protected void configure() {
+  @Provides
+  @Exposed
+  @Singleton
+  public WebDriver provideWebDriver(PropertiesReader propertiesReader, Browser browser) {
+    return browser.getWebDriver();
   }
 }

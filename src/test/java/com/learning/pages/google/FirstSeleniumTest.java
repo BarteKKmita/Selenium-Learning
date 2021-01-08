@@ -25,7 +25,7 @@ public class FirstSeleniumTest {
   void shouldFindElementOnGoogleWebSite() {
     getGoogleWebsite();
     googleSearchPage.waitForPageToLoad();
-    googleSearchPage.searchGoogle("Getting grip on it! ");
+    googleSearchPage.search("Getting grip on it! ");
   }
 
   @Test
@@ -40,7 +40,7 @@ public class FirstSeleniumTest {
   }
 
   private void getGoogleWebsite() {
-    googleSearchPage.openGoogleWebsite();
+    googleSearchPage.open();
   }
 
   @AfterClass(alwaysRun = true)

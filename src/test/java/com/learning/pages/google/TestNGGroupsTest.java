@@ -16,7 +16,7 @@ public class TestNGGroupsTest {
 
   @Test(groups = {"sanity"})
   void shouldGoToGoogle() {
-    googleSearchPage.openGoogleWebsite();
+    googleSearchPage.open();
   }
 
   @Test(priority = 1)

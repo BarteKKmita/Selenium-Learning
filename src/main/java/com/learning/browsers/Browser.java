@@ -1,13 +1,12 @@
 package com.learning.browsers;
 
 import com.learning.configuration.PropertiesReader;
-import com.netflix.governator.annotations.AutoBind;
 import javax.annotation.PreDestroy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class WebDriverFactory {
+public class Browser {
 
   private static final String BROWSER_PROPERTIES_NAME = "browser";
   private static final String PATH_TO_EDGE_DRIVER = "pathToEdgeDriver";
@@ -15,9 +14,9 @@ public class WebDriverFactory {
 
   private WebDriver webDriver;
 
-  public WebDriverFactory(PropertiesReader propertiesReader) {
+  public Browser(PropertiesReader propertiesReader) {
     this.propertiesReader = propertiesReader;
-    webDriver = generateWebDriver();
+    this.webDriver = generateWebDriver();
   }
 
   public WebDriver getWebDriver() {
@@ -36,8 +35,12 @@ public class WebDriverFactory {
     }
   }
 
+  public String getCurrentPageURL() {
+    return webDriver.getCurrentUrl();
+  }
+
   @PreDestroy
-  public void closeBrowser(){
+  public void closeBrowser() {
     webDriver.close();
     webDriver.quit();
   }
