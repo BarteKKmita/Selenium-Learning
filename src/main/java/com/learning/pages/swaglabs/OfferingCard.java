@@ -7,7 +7,7 @@ import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
 
 public class OfferingCard {
 
-  @FindBy(css = "button[class*=btn_primary")
+  @FindBy(css = "button[class='btn_primary btn_inventory']")
   private WebElement addToCartButton;
 
   @FindBy(className = "inventory_item_name")

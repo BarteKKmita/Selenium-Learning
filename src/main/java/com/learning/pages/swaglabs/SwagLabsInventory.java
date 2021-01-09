@@ -19,7 +19,7 @@ public class SwagLabsInventory extends PageBase {
   @FindBy(className = "inventory_item")
   private List<WebElement> offeringCards;
 
-  @FindBy(css = "span[class$=shopping_cart_badge")
+  @FindBy(css = "span[class='fa-layers-counter shopping_cart_badge']")
   private WebElement cart;
 
   public SwagLabsInventory(WebDriver driver, PropertiesReader propertiesReader) {
