@@ -27,7 +27,6 @@ public class PagesModule extends PrivateModule {
     return new SwagLabsLoginPage(webDriver, propertiesReader);
   }
 
-
   @Provides
   @Exposed
   @Singleton

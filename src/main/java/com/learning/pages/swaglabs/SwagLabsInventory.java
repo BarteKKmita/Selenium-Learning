@@ -50,7 +50,7 @@ public class SwagLabsInventory extends PageBase {
         .allMatch(Objects::nonNull);
   }
 
-  private String getURL() {
+  String getURL() {
     return propertiesReader.getProperty(INVENTORY_PAGE_URL_PROPERTY);
   }
 

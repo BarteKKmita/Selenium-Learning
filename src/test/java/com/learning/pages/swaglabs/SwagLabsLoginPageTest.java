@@ -22,7 +22,7 @@ public class SwagLabsLoginPageTest {
   @Test(dataProvider = "successfulLoginData")
   void shouldGoToShopPageWhenSuccessfulLogin(String username, String password) {
     //Given
-    String expectedPageUrl = "https://www.saucedemo.com/inventory.html";
+    String expectedPageUrl = swagLabsLoginPage.getURL();
     //When
     swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, password);

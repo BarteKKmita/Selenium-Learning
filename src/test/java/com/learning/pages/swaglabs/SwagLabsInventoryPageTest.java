@@ -5,7 +5,6 @@ import static org.testng.Assert.assertEquals;
 import com.google.inject.Inject;
 import com.learning.ApplicationModule;
 import com.learning.browsers.Browser;
-import com.learning.configuration.PropertiesReader;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
@@ -14,18 +13,14 @@ import org.testng.annotations.Test;
 public class SwagLabsInventoryPageTest {
 
   @Inject
-  private PropertiesReader propertiesReader;
-  @Inject
   private Browser browser;
   @Inject
   private SwagLabsInventory swagLabsInventory;
 
-  private static final String INVENTORY_PAGE_URL_PROPERTY = "swagLabsInventoryURL";
-
   @Test
   void shouldGoToShopPage() throws InterruptedException {
     //Given
-    String expectedURL = propertiesReader.getProperty(INVENTORY_PAGE_URL_PROPERTY);
+    String expectedURL = swagLabsInventory.getURL();
     //When
     swagLabsInventory.open();
     //Then

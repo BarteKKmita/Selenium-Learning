@@ -23,8 +23,7 @@ public class FirstSeleniumTest {
   @lombok.SneakyThrows
   @Test
   void shouldFindElementOnGoogleWebSite() {
-    getGoogleWebsite();
-    googleSearchPage.waitForPageToLoad();
+    googleSearchPage.open();
     googleSearchPage.search("Getting grip on it! ");
   }
 
@@ -33,14 +32,10 @@ public class FirstSeleniumTest {
     //Given
     int expectedInputElements = 8;
     //When
-    getGoogleWebsite();
+    googleSearchPage.open();
     int actualInputElements = googleSearchPage.getAllInputsCount();
     //Then
     assertEquals(expectedInputElements, actualInputElements);
-  }
-
-  private void getGoogleWebsite() {
-    googleSearchPage.open();
   }
 
   @AfterClass(alwaysRun = true)
