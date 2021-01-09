@@ -53,7 +53,7 @@ public class SwagLabsLoginPage extends PageBase {
         .allMatch(Objects::nonNull);
   }
 
-  private String getURL() {
+  String getURL() {
     return propertiesReader.getProperty(SWAGLABS_URL_PROPERTIES_NAME);
   }
 }
