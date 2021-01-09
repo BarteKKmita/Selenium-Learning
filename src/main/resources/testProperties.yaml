@@ -1,4 +1,5 @@
 swagLabsURL = https://www.saucedemo.com/index.html
+swagLabsInventoryURL = https://www.saucedemo.com/inventory.html
 googleURL = https://google.com
 browser = Chrome
 pathToEdgeDriver =

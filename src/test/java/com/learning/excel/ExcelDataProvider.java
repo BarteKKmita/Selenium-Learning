@@ -2,7 +2,8 @@ package com.learning.excel;
 
 import static com.learning.excel.ExcelTest.EXCEL_FILE_NAME;
 
-import com.learning.browsers.BrowserDriverGenerator;
+import com.learning.browsers.Browser;
+import com.learning.configuration.PropertiesReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class ExcelDataProvider {
 
   @BeforeSuite
   void driverSetUp() {
-    driver = new BrowserDriverGenerator().getDriver();
+    driver = new Browser( new PropertiesReader()).getWebDriver();
   }
 
   @Test(dataProvider = "firstDataProvider")

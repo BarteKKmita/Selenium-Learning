@@ -11,7 +11,6 @@ public class Browser {
   private static final String BROWSER_PROPERTIES_NAME = "browser";
   private static final String PATH_TO_EDGE_DRIVER = "pathToEdgeDriver";
   private final PropertiesReader propertiesReader;
-
   private WebDriver webDriver;
 
   public Browser(PropertiesReader propertiesReader) {
