@@ -1,34 +1,52 @@
 package com.learning.pages.swaglabs;
 
+import static org.testng.Assert.assertEquals;
+
 import com.google.inject.Inject;
-import com.learning.browsers.BrowserDriver;
-import com.learning.browsers.DriverModule;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
+import com.learning.ApplicationModule;
+import com.learning.browsers.Browser;
+import com.learning.configuration.PropertiesReader;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Guice;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-@Ignore(value = "This test case will be added after solving ADD TO CARD btn issue.")
-@Guice(modules = DriverModule.class)
+@Guice(modules = ApplicationModule.class)
 public class SwagLabsInventoryPageTest {
 
   @Inject
-  private BrowserDriver browserDriver;
-
-  private WebDriver driver;
+  private PropertiesReader propertiesReader;
+  @Inject
+  private Browser browser;
+  @Inject
   private SwagLabsInventory swagLabsInventory;
 
-  @BeforeClass
-  void setUp() {
-    driver = browserDriver.getDriver();
-    swagLabsInventory = new SwagLabsInventory(driver);
+  private static final String INVENTORY_PAGE_URL_PROPERTY = "swagLabsInventoryURL";
+
+  @Test
+  void shouldGoToShopPage() throws InterruptedException {
+    //Given
+    String expectedURL = propertiesReader.getProperty(INVENTORY_PAGE_URL_PROPERTY);
+    //When
+    swagLabsInventory.open();
+    //Then
+    assertEquals(browser.getCurrentPageURL(), expectedURL);
   }
 
   @Test
-  void shouldGoToShopPageWhenSuccessfulLogin() {
-    driver.get(SwagLabsInventory.INVENTORY_PAGE_URL);
-    swagLabsInventory.performAddToCart();
+  void shouldAddItemToCart() {
+    //Given
+    String itemName = "Sauce Labs Onesie";
+    int expectedItemsInCart = 1;
+    //When
+    swagLabsInventory.open();
+    swagLabsInventory.addItemToCart(itemName);
+    int actualItemsInCart = swagLabsInventory.countItemsInCart();
+    //Then
+    assertEquals(actualItemsInCart, expectedItemsInCart);
   }
 
+  @AfterClass(alwaysRun = true)
+  void tearDown() {
+    swagLabsInventory.close();
+  }
 }
