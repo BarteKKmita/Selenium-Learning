@@ -7,19 +7,19 @@ import org.testng.annotations.Test;
 public class ListenerTest {
 
   @Test
-  void test1(){
+  void test1() {
     System.out.println("Doing first test.");
   }
 
 
   @Test
-  void test2(){
+  void test2() {
     System.out.println("Doing second test.");
   }
 
 
   @Test
-  void test3(){
+  void test3() {
     System.out.println("Doing third test.");
   }
 
