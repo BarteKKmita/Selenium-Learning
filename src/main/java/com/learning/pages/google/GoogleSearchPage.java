@@ -2,12 +2,10 @@ package com.learning.pages.google;
 
 import com.learning.configuration.PropertiesReader;
 import com.learning.pages.PageBase;
-import java.util.Objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GoogleSearchPage extends PageBase {
@@ -25,7 +23,7 @@ public class GoogleSearchPage extends PageBase {
     this.propertiesReader = propertiesReader;
   }
 
-  public void open(){
+  public void open() {
     driver.get(getURL());
     waitForPageToLoad();
   }
@@ -38,10 +36,7 @@ public class GoogleSearchPage extends PageBase {
   @Override
   public boolean waitForPageToLoad() {
     WebDriverWait wait = new WebDriverWait(driver, 10);
-    return wait.until(ExpectedConditions
-        .visibilityOfAllElements(searchBox,searchButton))
-        .stream()
-        .allMatch(Objects::nonNull);
+    return wait.until(driver -> searchBox.isDisplayed() && searchButton.isEnabled());
   }
 
   public int getAllInputsCount() {

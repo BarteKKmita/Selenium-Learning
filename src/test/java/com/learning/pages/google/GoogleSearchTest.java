@@ -2,7 +2,6 @@ package com.learning.pages.google;
 
 import com.google.inject.Inject;
 import com.learning.ApplicationModule;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
@@ -18,10 +17,5 @@ public class GoogleSearchTest {
     googleSearchPage.open();
     //When
     googleSearchPage.search("Simodrive launch");
-  }
-
-  @AfterClass(alwaysRun = true)
-  void tearDown() {
-    googleSearchPage.close();
   }
 }

@@ -5,7 +5,6 @@ import static org.testng.Assert.assertEquals;
 import com.google.inject.Inject;
 import com.learning.ApplicationModule;
 import com.learning.browsers.Browser;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
@@ -18,11 +17,13 @@ public class SwagLabsLoginPageTest {
 
   @Inject
   private SwagLabsLoginPage swagLabsLoginPage;
+  @Inject
+  private SwagLabsInventory swagLabsInventoryPage;
 
   @Test(dataProvider = "successfulLoginData")
   void shouldGoToShopPageWhenSuccessfulLogin(String username, String password) {
     //Given
-    String expectedPageUrl = swagLabsLoginPage.getURL();
+    String expectedPageUrl = swagLabsInventoryPage.getURL();
     //When
     swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, password);
@@ -82,10 +83,5 @@ public class SwagLabsLoginPageTest {
         {"hacker", "secret_sauce"},
         {"random internet user", "secret_sauce"}
     };
-  }
-
-  @AfterClass(alwaysRun = true)
-  void tearDown() {
-    swagLabsLoginPage.close();
   }
 }

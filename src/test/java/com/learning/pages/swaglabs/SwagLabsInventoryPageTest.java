@@ -5,7 +5,6 @@ import static org.testng.Assert.assertEquals;
 import com.google.inject.Inject;
 import com.learning.ApplicationModule;
 import com.learning.browsers.Browser;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
@@ -38,10 +37,5 @@ public class SwagLabsInventoryPageTest {
     int actualItemsInCart = swagLabsInventory.countItemsInCart();
     //Then
     assertEquals(actualItemsInCart, expectedItemsInCart);
-  }
-
-  @AfterClass(alwaysRun = true)
-  void tearDown() {
-    swagLabsInventory.close();
   }
 }
