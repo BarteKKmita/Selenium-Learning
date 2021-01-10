@@ -2,7 +2,6 @@ package com.learning.pages.google;
 
 import com.google.inject.Inject;
 import com.learning.ApplicationModule;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -39,10 +38,5 @@ public class TestNGGroupsTest {
   @Test(dependsOnGroups = {"sanity"})
   void shouldRunSanitysGroupTestsFirst() {
     System.out.println("I am running lastly");
-  }
-
-  @AfterSuite(alwaysRun = true)
-  void tearDown() {
-    googleSearchPage.close();
   }
 }

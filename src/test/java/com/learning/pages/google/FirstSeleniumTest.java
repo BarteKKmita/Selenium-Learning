@@ -5,7 +5,6 @@ import static org.testng.Assert.assertNotNull;
 
 import com.google.inject.Inject;
 import com.learning.ApplicationModule;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
@@ -36,10 +35,5 @@ public class FirstSeleniumTest {
     int actualInputElements = googleSearchPage.getAllInputsCount();
     //Then
     assertEquals(expectedInputElements, actualInputElements);
-  }
-
-  @AfterClass(alwaysRun = true)
-  void tearDown() {
-    googleSearchPage.close();
   }
 }
