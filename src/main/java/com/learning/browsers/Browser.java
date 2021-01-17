@@ -1,19 +1,22 @@
 package com.learning.browsers;
 
-import com.learning.configuration.PropertiesReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-public class Browser {
+@Component
+public class Browser implements DisposableBean {
 
-  private static final String BROWSER_PROPERTIES_NAME = "browser";
-  private static final String PATH_TO_EDGE_DRIVER = "pathToEdgeDriver";
-  private final PropertiesReader propertiesReader;
+  private final String browserName;
+  private final String pathToEdgeDriver;
   private WebDriver webDriver;
 
-  public Browser(PropertiesReader propertiesReader) {
-    this.propertiesReader = propertiesReader;
+  public Browser(@Value("${pathToEdgeDriver}") String pathToEdgeDriver, @Value("${browser}") String browser) {
+    this.browserName = browser;
+    this.pathToEdgeDriver = pathToEdgeDriver;
     this.webDriver = generateWebDriver();
   }
 
@@ -22,11 +25,10 @@ public class Browser {
   }
 
   private WebDriver generateWebDriver() {
-    String browserName = propertiesReader.getProperty(BROWSER_PROPERTIES_NAME);
     if (browserName.equalsIgnoreCase("Chrome")) {
       return new ChromeDriver();
     } else if (browserName.equalsIgnoreCase("Edge")) {
-      System.setProperty("webdriver.edge.driver", propertiesReader.getProperty(PATH_TO_EDGE_DRIVER));
+      System.setProperty("webdriver.edge.driver", pathToEdgeDriver);
       return new EdgeDriver();
     } else {
       throw new BrowserNotSupportedException("Unknown browser.");
@@ -36,5 +38,9 @@ public class Browser {
   public String getCurrentPageURL() {
     return webDriver.getCurrentUrl();
   }
-}
 
+  @Override
+  public void destroy() {
+    webDriver.quit();
+  }
+}

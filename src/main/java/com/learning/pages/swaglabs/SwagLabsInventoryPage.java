@@ -1,30 +1,30 @@
 package com.learning.pages.swaglabs;
 
-import com.learning.configuration.PropertiesReader;
+import com.learning.browsers.Browser;
 import com.learning.pages.PageBase;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-public class SwagLabsInventory extends PageBase {
+@Component
+public class SwagLabsInventoryPage extends PageBase {
 
-  private final PropertiesReader propertiesReader;
-  private static final String INVENTORY_PAGE_URL_PROPERTY = "swagLabsInventoryURL";
+  private final String swagLabsInventoryURL;
 
   @FindBy(className = "inventory_item")
   private List<WebElement> offeringCards;
-
   @FindBy(css = "span[class='fa-layers-counter shopping_cart_badge']")
   private WebElement cart;
 
-  public SwagLabsInventory(WebDriver driver, PropertiesReader propertiesReader) {
-    super(driver);
-    this.propertiesReader = propertiesReader;
+  public SwagLabsInventoryPage(Browser browser, @Value("${swagLabsInventoryURL}") String swagLabsInventoryURL) {
+    super(browser);
+    this.swagLabsInventoryURL = swagLabsInventoryURL;
   }
 
   void open() {
@@ -38,7 +38,7 @@ public class SwagLabsInventory extends PageBase {
   }
 
   public int countItemsInCart() {
-      return Integer.parseInt(cart.getText());
+    return Integer.parseInt(cart.getText());
   }
 
   @Override
@@ -51,7 +51,7 @@ public class SwagLabsInventory extends PageBase {
   }
 
   String getURL() {
-    return propertiesReader.getProperty(INVENTORY_PAGE_URL_PROPERTY);
+    return swagLabsInventoryURL;
   }
 
   private OfferingCard getItem(String itemName) {

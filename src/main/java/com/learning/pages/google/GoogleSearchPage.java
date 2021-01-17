@@ -1,26 +1,27 @@
 package com.learning.pages.google;
 
-import com.learning.configuration.PropertiesReader;
+import com.learning.browsers.Browser;
 import com.learning.pages.PageBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class GoogleSearchPage extends PageBase {
+
+  private final String googleURL;
 
   @FindBy(name = "q")
   private WebElement searchBox;
   @FindBy(name = "btnK")
   private WebElement searchButton;
 
-  private final PropertiesReader propertiesReader;
-  private static final String GOOGLE_URL_PROPERTIES_NAME = "googleURL";
-
-  public GoogleSearchPage(WebDriver driver, PropertiesReader propertiesReader) {
-    super(driver);
-    this.propertiesReader = propertiesReader;
+  public GoogleSearchPage(Browser browser, @Value("${googleURL}") String googleURL) {
+    super(browser);
+    this.googleURL = googleURL;
   }
 
   public void open() {
@@ -44,6 +45,6 @@ public class GoogleSearchPage extends PageBase {
   }
 
   private String getURL() {
-    return propertiesReader.getProperty(GOOGLE_URL_PROPERTIES_NAME);
+    return googleURL;
   }
 }

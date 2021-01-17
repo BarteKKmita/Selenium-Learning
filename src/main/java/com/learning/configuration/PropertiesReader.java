@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 public class PropertiesReader {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(PropertiesReader.class);
-  private static final String PATH_TO_FILE = "testProperties.yaml";
+  private static final String PATH_TO_FILE = "application.properties";
 
   public String getProperty(String property) {
     String readProperty = "";
