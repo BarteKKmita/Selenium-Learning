@@ -1,7 +1,6 @@
 package com.learning.browsers;
 
 import com.learning.configuration.PropertiesReader;
-import javax.annotation.PreDestroy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -36,12 +35,6 @@ public class Browser {
 
   public String getCurrentPageURL() {
     return webDriver.getCurrentUrl();
-  }
-
-  @PreDestroy
-  public void closeBrowser() {
-    webDriver.close();
-    webDriver.quit();
   }
 }
 
