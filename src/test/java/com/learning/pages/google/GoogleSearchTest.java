@@ -1,14 +1,16 @@
 package com.learning.pages.google;
 
-import com.google.inject.Inject;
-import com.learning.ApplicationModule;
-import org.testng.annotations.Guice;
+import com.learning.browsers.BrowserConfiguration;
+import com.learning.pages.PagesConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
-@Guice(modules = ApplicationModule.class)
-public class GoogleSearchTest {
+@ContextConfiguration(classes = {BrowserConfiguration.class, PagesConfiguration.class})
+public class GoogleSearchTest extends AbstractTestNGSpringContextTests {
 
-  @Inject
+  @Autowired
   private GoogleSearchPage googleSearchPage;
 
   @Test

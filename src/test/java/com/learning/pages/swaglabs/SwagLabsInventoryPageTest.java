@@ -2,18 +2,20 @@ package com.learning.pages.swaglabs;
 
 import static org.testng.Assert.assertEquals;
 
-import com.google.inject.Inject;
-import com.learning.ApplicationModule;
 import com.learning.browsers.Browser;
-import org.testng.annotations.Guice;
+import com.learning.browsers.BrowserConfiguration;
+import com.learning.pages.PagesConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
-@Guice(modules = ApplicationModule.class)
-public class SwagLabsInventoryPageTest {
+@ContextConfiguration(classes = {BrowserConfiguration.class, PagesConfiguration.class})
+public class SwagLabsInventoryPageTest extends AbstractTestNGSpringContextTests {
 
-  @Inject
+  @Autowired
   private Browser browser;
-  @Inject
+  @Autowired
   private SwagLabsInventory swagLabsInventory;
 
   @Test

@@ -1,16 +1,18 @@
 package com.learning.pages.google;
 
-import com.google.inject.Inject;
-import com.learning.ApplicationModule;
-import org.testng.annotations.Guice;
+import com.learning.browsers.BrowserConfiguration;
+import com.learning.pages.PagesConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-@Guice(modules = ApplicationModule.class)
-public class TestNGGroupsTest {
+@ContextConfiguration(classes = {BrowserConfiguration.class, PagesConfiguration.class})
+public class TestNGGroupsTest extends AbstractTestNGSpringContextTests {
 
-  @Inject
+  @Autowired
   private GoogleSearchPage googleSearchPage;
 
   @Test(groups = {"sanity"})
@@ -27,7 +29,6 @@ public class TestNGGroupsTest {
   void test3() {
     System.out.println("This is test 3");
   }
-
 
   @Test(groups = {"sanity"})
   @Parameters({"MyParameters"})
