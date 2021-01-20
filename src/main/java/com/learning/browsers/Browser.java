@@ -14,8 +14,8 @@ public class Browser implements DisposableBean {
   private final String pathToEdgeDriver;
   private WebDriver webDriver;
 
-  public Browser(@Value("${pathToEdgeDriver}") String pathToEdgeDriver, @Value("${browser}") String browser) {
-    this.browserName = browser;
+  public Browser(@Value("${pathToEdgeDriver}") String pathToEdgeDriver, @Value("${browser}") String browserName) {
+    this.browserName = browserName;
     this.pathToEdgeDriver = pathToEdgeDriver;
     this.webDriver = generateWebDriver();
   }
