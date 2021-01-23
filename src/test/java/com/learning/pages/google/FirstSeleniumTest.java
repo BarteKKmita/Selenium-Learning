@@ -1,7 +1,6 @@
 package com.learning.pages.google;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 
 import com.learning.TestsConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +13,6 @@ public class FirstSeleniumTest extends AbstractTestNGSpringContextTests {
 
   @Autowired
   private GoogleSearchPage googleSearchPage;
-
-  @Test
-  void shouldGooglePageNotBeNullWhenAutowired() {
-    assertNotNull(googleSearchPage);
-  }
 
   @Test
   void shouldFindElementOnGoogleWebSite() {

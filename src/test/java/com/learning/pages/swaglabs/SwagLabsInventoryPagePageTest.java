@@ -1,7 +1,6 @@
 package com.learning.pages.swaglabs;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 
 import com.learning.TestsConfiguration;
 import com.learning.browsers.Browser;
@@ -17,12 +16,6 @@ public class SwagLabsInventoryPagePageTest extends AbstractTestNGSpringContextTe
   private Browser browser;
   @Autowired
   private SwagLabsInventoryPage swagLabsInventoryPage;
-
-  @Test
-  void shouldObjectsNotBeNullWhenAutowired() {
-    assertNotNull(browser);
-    assertNotNull(swagLabsInventoryPage);
-  }
 
   @Test
   void shouldGoToShopPage() throws InterruptedException {

@@ -1,7 +1,5 @@
 package com.learning.pages.google;
 
-import static org.testng.Assert.assertNotNull;
-
 import com.learning.TestsConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,11 +13,6 @@ public class TestNGGroupsTest extends AbstractTestNGSpringContextTests {
 
   @Autowired
   private GoogleSearchPage googleSearchPage;
-
-  @Test
-  void shouldGooglePageNotBeNullWhenAutowired() {
-    assertNotNull(googleSearchPage);
-  }
 
   @Test(groups = {"sanity"})
   void shouldGoToGoogle() {

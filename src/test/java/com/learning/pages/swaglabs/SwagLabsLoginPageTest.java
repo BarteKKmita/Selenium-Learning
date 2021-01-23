@@ -1,7 +1,6 @@
 package com.learning.pages.swaglabs;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 
 import com.learning.TestsConfiguration;
 import com.learning.browsers.Browser;
@@ -20,13 +19,6 @@ public class SwagLabsLoginPageTest extends AbstractTestNGSpringContextTests {
   private SwagLabsLoginPage swagLabsLoginPage;
   @Autowired
   private SwagLabsInventoryPage swagLabsInventoryPage;
-
-  @Test
-  void shouldObjectsNotBeNullWhenAutowired() {
-    assertNotNull(browser);
-    assertNotNull(swagLabsLoginPage);
-    assertNotNull(swagLabsInventoryPage);
-  }
 
   @Test(dataProvider = "successfulLoginData")
   void shouldGoToShopPageWhenSuccessfulLogin(String username, String password) {
