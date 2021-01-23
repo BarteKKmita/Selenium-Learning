@@ -1,18 +1,17 @@
 package com.learning.pages;
 
 import com.learning.browsers.Browser;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public abstract class PageBase {
+public abstract class PageBase implements InitializingBean {
 
-  protected final WebDriver driver;
+  @Autowired
+  protected Browser browser;
 
-  public PageBase(@Autowired Browser browser) {
-    this.driver = browser.getWebDriver();
-    PageFactory.initElements(driver, this);
+  @Override
+  public void afterPropertiesSet() {
+    PageFactory.initElements(browser.getWebDriver(), this);
   }
-
-  public abstract boolean waitForPageToLoad();
 }

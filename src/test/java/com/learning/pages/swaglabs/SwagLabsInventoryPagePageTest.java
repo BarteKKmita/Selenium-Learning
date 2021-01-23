@@ -28,7 +28,6 @@ public class SwagLabsInventoryPagePageTest extends AbstractTestNGSpringContextTe
   void shouldGoToShopPage() throws InterruptedException {
     //Given
     String expectedURL = swagLabsInventoryPage.getURL();
-    //When
     swagLabsInventoryPage.open();
     //Then
     assertEquals(browser.getCurrentPageURL(), expectedURL);
@@ -42,8 +41,8 @@ public class SwagLabsInventoryPagePageTest extends AbstractTestNGSpringContextTe
     //When
     swagLabsInventoryPage.open();
     swagLabsInventoryPage.addItemToCart(itemName);
-    int actualItemsInCart = swagLabsInventoryPage.countItemsInCart();
     //Then
+    int actualItemsInCart = swagLabsInventoryPage.countItemsInCart();
     assertEquals(actualItemsInCart, expectedItemsInCart);
   }
 }

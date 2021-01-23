@@ -34,6 +34,6 @@ public class FirstSeleniumTest extends AbstractTestNGSpringContextTests {
     googleSearchPage.open();
     int actualInputElements = googleSearchPage.getAllInputsCount();
     //Then
-    assertEquals(expectedInputElements, actualInputElements);
+    assertEquals(actualInputElements, expectedInputElements);
   }
 }

@@ -1,42 +1,57 @@
 package com.learning.browsers;
 
+import java.util.function.Function;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Browser implements DisposableBean {
 
-  private final String browserName;
-  private final String pathToEdgeDriver;
   private WebDriver webDriver;
 
-  public Browser(@Value("${pathToEdgeDriver}") String pathToEdgeDriver, @Value("${browser}") String browserName) {
-    this.browserName = browserName;
-    this.pathToEdgeDriver = pathToEdgeDriver;
-    this.webDriver = generateWebDriver();
+  public Browser(@Autowired WebDriverFactory webDriverFactory) {
+    this.webDriver = webDriverFactory.getWebDriver();
   }
 
   public WebDriver getWebDriver() {
     return webDriver;
   }
 
-  private WebDriver generateWebDriver() {
-    if (browserName.equalsIgnoreCase("Chrome")) {
-      return new ChromeDriver();
-    } else if (browserName.equalsIgnoreCase("Edge")) {
-      System.setProperty("webdriver.edge.driver", pathToEdgeDriver);
-      return new EdgeDriver();
-    } else {
-      throw new BrowserNotSupportedException("Unknown browser.");
-    }
-  }
-
   public String getCurrentPageURL() {
     return webDriver.getCurrentUrl();
+  }
+
+  public void open(String websiteURL) {
+    webDriver.get(websiteURL);
+    waitForPageToLoad();
+  }
+
+  private void waitForPageToLoad() {
+    WebDriverWait wait = new WebDriverWait(webDriver, 10);
+    wait.until(isJavascriptReady());
+    wait.until(isJQueryReady());
+  }
+
+  private Function<WebDriver, Boolean> isJavascriptReady() {
+    return driver -> ((JavascriptExecutor) driver)
+        .executeScript("return document.readyState")
+        .equals("complete");
+  }
+
+  private Function<WebDriver, Boolean> isJQueryReady() {
+    return driver -> {
+      try {
+        return ((Long) ((JavascriptExecutor) driver)
+            .executeScript("return jQuery.active") == 0);
+      } catch (Exception e) {
+        return true;
+      }
+    };
   }
 
   @Override

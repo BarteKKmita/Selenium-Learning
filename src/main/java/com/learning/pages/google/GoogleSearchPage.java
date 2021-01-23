@@ -1,11 +1,9 @@
 package com.learning.pages.google;
 
-import com.learning.browsers.Browser;
 import com.learning.pages.PageBase;
-import org.openqa.selenium.By;
+import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -18,15 +16,15 @@ public class GoogleSearchPage extends PageBase {
   private WebElement searchBox;
   @FindBy(name = "btnK")
   private WebElement searchButton;
+  @FindBy(xpath = "//input")
+  private List<WebElement> inputFields;
 
-  public GoogleSearchPage(Browser browser, @Value("${googleURL}") String googleURL) {
-    super(browser);
+  public GoogleSearchPage(@Value("${googleURL}") String googleURL) {
     this.googleURL = googleURL;
   }
 
   public void open() {
-    driver.get(getURL());
-    waitForPageToLoad();
+    browser.open(googleURL);
   }
 
   public void search(String searchPhrase) {
@@ -34,14 +32,8 @@ public class GoogleSearchPage extends PageBase {
     searchButton.submit();
   }
 
-  @Override
-  public boolean waitForPageToLoad() {
-    WebDriverWait wait = new WebDriverWait(driver, 10);
-    return wait.until(driver -> searchBox.isDisplayed() && searchButton.isEnabled());
-  }
-
   public int getAllInputsCount() {
-    return driver.findElements(By.xpath("//input")).size();
+    return inputFields.size();
   }
 
   private String getURL() {
