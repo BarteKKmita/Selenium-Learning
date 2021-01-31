@@ -108,6 +108,7 @@ public class SwagLabsLoginPageTest extends AbstractTestNGSpringContextTests {
     //When
     swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, password);
+    //Then
     assertThrows(() -> browser.waitForPageToLoad(swagLabsInventoryPage));
   }
 
