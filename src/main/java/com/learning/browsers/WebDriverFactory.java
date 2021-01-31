@@ -1,6 +1,5 @@
 package com.learning.browsers;
 
-import com.google.common.base.Strings;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -8,6 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 @Component
 public class WebDriverFactory implements InitializingBean {
@@ -43,7 +43,7 @@ public class WebDriverFactory implements InitializingBean {
   }
 
   private String getPathToEdgeDriver() {
-    if (Strings.isNullOrEmpty(pathToEdgeDriver)) {
+    if (StringUtils.hasLength(pathToEdgeDriver)) {
       throw new IllegalStateException("Path to Edge driver cannot be null or empty");
     } else {
       return pathToEdgeDriver;
