@@ -12,6 +12,6 @@ public abstract class PageBase implements InitializingBean {
 
   @Override
   public void afterPropertiesSet() {
-    PageFactory.initElements(browser.getWebDriver(), this);
+    PageFactory.initElements(browser.getElementLocator(), this);
   }
 }
