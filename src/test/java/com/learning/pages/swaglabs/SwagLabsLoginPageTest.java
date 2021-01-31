@@ -1,6 +1,7 @@
 package com.learning.pages.swaglabs;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertThrows;
 
 import com.learning.TestsConfiguration;
 import com.learning.browsers.Browser;
@@ -27,8 +28,8 @@ public class SwagLabsLoginPageTest extends AbstractTestNGSpringContextTests {
     //When
     swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, password);
-    String actualPageUrl = browser.getCurrentPageURL();
     //Then
+    String actualPageUrl = browser.getCurrentPageURL();
     assertEquals(actualPageUrl, expectedPageUrl);
   }
 
@@ -39,41 +40,96 @@ public class SwagLabsLoginPageTest extends AbstractTestNGSpringContextTests {
     //When
     swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, password);
-    String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
+    String actualErrorMessage = swagLabsLoginPage.getErrorText();
     assertEquals(actualErrorMessage, expectedErrorMessage);
   }
 
-  @Test(dataProvider = "unsuccessfulLoginData")
-  void shouldErrorMessageBeVisibleWhenLackOfPassword(String username, String password) {
+  @Test
+  void shouldErrorMessageBeVisibleWhenLackOfPassword() {
     //Given
+    String username = "standard_user";
     String expectedErrorMessage = "Epic sadface: Password is required";
     //When
     swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin(username, "");
-    String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
+    String actualErrorMessage = swagLabsLoginPage.getErrorText();
     assertEquals(actualErrorMessage, expectedErrorMessage);
   }
 
-  @Test(dataProvider = "unsuccessfulLoginData")
-  void shouldErrorMessageBeVisibleWhenLackOfUsername(String username, String password) {
+  @Test
+  void shouldErrorMessageBeVisibleWhenLackOfUsername() {
     //Given
+    String password = "secret_sauce";
     String expectedErrorMessage = "Epic sadface: Username is required";
     //When
     swagLabsLoginPage.open();
     swagLabsLoginPage.performLogin("", password);
-    String actualErrorMessage = swagLabsLoginPage.getErrorText();
     //Then
+    String actualErrorMessage = swagLabsLoginPage.getErrorText();
     assertEquals(actualErrorMessage, expectedErrorMessage);
   }
 
+  @Test
+  void shouldFailToLoginWhenLackOfCredentials() {
+    //Given
+    String expectedURL = swagLabsLoginPage.getPageURL();
+    //When
+    swagLabsLoginPage.open();
+    swagLabsLoginPage.performLogin("", "");
+    //Then
+    assertEquals(browser.getCurrentPageURL(), expectedURL);
+  }
+
+  @Test
+  void shouldNotGoToInventoryPageWithoutLogin() {
+    //Given
+    String expectedURL = swagLabsLoginPage.getPageURL();
+    //When
+    swagLabsInventoryPage.open();
+    //Then
+    assertEquals(browser.getCurrentPageURL(), expectedURL);
+  }
+
+  @Test(dataProvider = "lockedUserData")
+  void shouldNotLoginWhenLockedUser(String username, String password) {
+    //Given
+    String expectedErrorMessage = "Epic sadface: Sorry, this user has been locked out.";
+    //When
+    swagLabsLoginPage.open();
+    swagLabsLoginPage.performLogin(username, password);
+    //Then
+    assertEquals(swagLabsLoginPage.getErrorText(), expectedErrorMessage);
+  }
+
+  @Test(dataProvider = "problemUser")
+  void shouldFailToLoadPageWithProblemUserLogin(String username, String password) {
+    //When
+    swagLabsLoginPage.open();
+    swagLabsLoginPage.performLogin(username, password);
+    //Then
+    assertThrows(() -> browser.waitForPageToLoad(swagLabsInventoryPage));
+  }
 
   @DataProvider(name = "successfulLoginData")
   private Object[][] getDataForSuccessfulLogin() {
     return new Object[][]{
         {"standard_user", "secret_sauce"},
-        {"problem_user", "secret_sauce"}
+    };
+  }
+
+  @DataProvider(name = "lockedUserData")
+  private Object[][] getDataForLockedUser() {
+    return new Object[][]{
+        {"locked_out_user", "secret_sauce"},
+    };
+  }
+
+  @DataProvider(name = "problemUser")
+  private Object[][] getDataForProblemUser() {
+    return new Object[][]{
+        {"problem_user", "secret_sauce"},
     };
   }
 
@@ -81,7 +137,7 @@ public class SwagLabsLoginPageTest extends AbstractTestNGSpringContextTests {
   private Object[][] getDataForUnSuccessfulLogin() {
     return new Object[][]{
         {"hacker", "secret_sauce"},
-        {"random internet user", "secret_sauce"}
+        {"standard_user", "hackers_password"}
     };
   }
 }
