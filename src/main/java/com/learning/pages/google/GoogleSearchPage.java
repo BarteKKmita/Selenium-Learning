@@ -24,7 +24,7 @@ public class GoogleSearchPage extends PageBase {
   }
 
   public void open() {
-    browser.open(googleURL);
+    browser.open(googleURL, this);
   }
 
   public void search(String searchPhrase) {
@@ -34,6 +34,11 @@ public class GoogleSearchPage extends PageBase {
 
   public int getAllInputsCount() {
     return inputFields.size();
+  }
+
+  @Override
+  public boolean isLoaded() {
+    return browser.waitForElementsToLoad(searchBox, searchButton);
   }
 
   private String getURL() {

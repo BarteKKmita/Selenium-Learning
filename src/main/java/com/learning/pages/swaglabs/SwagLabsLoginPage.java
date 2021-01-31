@@ -26,7 +26,7 @@ public class SwagLabsLoginPage extends PageBase {
   }
 
   public void open() {
-    browser.open(swagLabsURL);
+    browser.open(swagLabsURL,this);
   }
 
   public void performLogin(String username, String password) {
@@ -37,5 +37,10 @@ public class SwagLabsLoginPage extends PageBase {
 
   public String getErrorText() {
     return errorButton.getText();
+  }
+
+  @Override
+  public boolean isLoaded() {
+    return browser.waitForElementsToLoad(usernameTextBox, passwordTextBox, loginButton);
   }
 }

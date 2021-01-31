@@ -23,7 +23,7 @@ public class SwagLabsInventoryPage extends PageBase {
   }
 
   public void open() {
-    browser.open(swagLabsInventoryURL);
+    browser.open(swagLabsInventoryURL, this);
   }
 
   public void addItemToCart(String itemName) {
@@ -37,6 +37,11 @@ public class SwagLabsInventoryPage extends PageBase {
 
   String getURL() {
     return swagLabsInventoryURL;
+  }
+
+  @Override
+  public boolean isLoaded() {
+    return browser.waitForElementsToLoad(offeringCards.toArray(WebElement[]::new));
   }
 
   private OfferingCard getItem(String itemName) {
