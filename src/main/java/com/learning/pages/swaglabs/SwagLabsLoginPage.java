@@ -34,9 +34,12 @@ public class SwagLabsLoginPage extends PageBase {
     passwordTextBox.sendKeys(password);
     loginButton.click();
   }
-
   public String getErrorText() {
     return errorButton.getText();
+  }
+
+  public String getPageURL(){
+    return swagLabsURL;
   }
 
   @Override
