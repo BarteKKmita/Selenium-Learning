@@ -12,7 +12,6 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
 @ContextConfiguration(classes = TestsConfiguration.class)
-
 public class SpringConfigurationIntegrationTest extends AbstractTestNGSpringContextTests {
 
   @Autowired
