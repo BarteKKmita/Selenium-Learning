@@ -39,10 +39,10 @@ public class Browser implements DisposableBean {
         .allMatch(WebElement::isEnabled));
   }
 
-  private void waitForPageToLoad(Loadable page) {
+  private boolean waitForPageToLoad(Loadable page) {
     WebDriverWait wait = new WebDriverWait(webDriver, 10);
     wait.until(isJavascriptReady());
-    page.isLoaded();
+    return page.isLoaded();
   }
 
   private Function<WebDriver, Boolean> isJavascriptReady() {
