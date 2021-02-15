@@ -1,18 +1,16 @@
 package com.learning.pages.swaglabs;
 
-import com.learning.configuration.PropertiesReader;
+import com.learning.browsers.Browser;
 import com.learning.pages.PageBase;
-import java.util.Objects;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SwagLabsLoginPage extends PageBase {
 
-  private final PropertiesReader propertiesReader;
-  private static final String SWAGLABS_URL_PROPERTIES_NAME = "swagLabsURL";
+  private final String swagLabsURL;
 
   @FindBy(id = "user-name")
   private WebElement usernameTextBox;
@@ -23,14 +21,12 @@ public class SwagLabsLoginPage extends PageBase {
   @FindBy(css = "input#login-button")
   private WebElement loginButton;
 
-  public SwagLabsLoginPage(WebDriver driver, PropertiesReader propertiesReader) {
-    super(driver);
-    this.propertiesReader = propertiesReader;
+  public SwagLabsLoginPage(Browser browser, @Value("${swagLabsURL}") String swagLabsURL) {
+    this.swagLabsURL = swagLabsURL;
   }
 
   public void open() {
-    driver.get(getURL());
-    waitForPageToLoad();
+    browser.open(swagLabsURL,this);
   }
 
   public void performLogin(String username, String password) {
@@ -44,16 +40,7 @@ public class SwagLabsLoginPage extends PageBase {
   }
 
   @Override
-  public boolean waitForPageToLoad() {
-    WebDriverWait wait = new WebDriverWait(driver, 5);
-    return wait.until(ExpectedConditions
-        .visibilityOfAllElements(usernameTextBox, passwordTextBox,
-            loginButton))
-        .stream()
-        .allMatch(Objects::nonNull);
-  }
-
-  String getURL() {
-    return propertiesReader.getProperty(SWAGLABS_URL_PROPERTIES_NAME);
+  public boolean isLoaded() {
+    return browser.waitForElementsToLoad(usernameTextBox, passwordTextBox, loginButton);
   }
 }

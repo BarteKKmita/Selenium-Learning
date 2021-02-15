@@ -1,47 +1,58 @@
 package com.learning.browsers;
 
-import com.learning.configuration.PropertiesReader;
-import javax.annotation.PreDestroy;
+import java.util.Arrays;
+import java.util.function.Function;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.pagefactory.DefaultElementLocatorFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class Browser {
+@Component
+public class Browser implements DisposableBean {
 
-  private static final String BROWSER_PROPERTIES_NAME = "browser";
-  private static final String PATH_TO_EDGE_DRIVER = "pathToEdgeDriver";
-  private final PropertiesReader propertiesReader;
-  private WebDriver webDriver;
+  private final WebDriver webDriver;
 
-  public Browser(PropertiesReader propertiesReader) {
-    this.propertiesReader = propertiesReader;
-    this.webDriver = generateWebDriver();
+  public Browser(@Autowired WebDriverFactory webDriverFactory) {
+    this.webDriver = webDriverFactory.getWebDriver();
   }
 
-  public WebDriver getWebDriver() {
-    return webDriver;
-  }
-
-  private WebDriver generateWebDriver() {
-    String browserName = propertiesReader.getProperty(BROWSER_PROPERTIES_NAME);
-    if (browserName.equalsIgnoreCase("Chrome")) {
-      return new ChromeDriver();
-    } else if (browserName.equalsIgnoreCase("Edge")) {
-      System.setProperty("webdriver.edge.driver", propertiesReader.getProperty(PATH_TO_EDGE_DRIVER));
-      return new EdgeDriver();
-    } else {
-      throw new BrowserNotSupportedException("Unknown browser.");
-    }
+  public DefaultElementLocatorFactory getElementLocator() {
+    return new DefaultElementLocatorFactory(webDriver);
   }
 
   public String getCurrentPageURL() {
     return webDriver.getCurrentUrl();
   }
 
-  @PreDestroy
-  public void closeBrowser() {
-    webDriver.close();
+  public void open(String websiteURL, Loadable page) {
+    webDriver.get(websiteURL);
+    waitForPageToLoad(page);
+  }
+
+  public boolean waitForElementsToLoad(WebElement... elements) {
+    WebDriverWait wait = new WebDriverWait(webDriver, 10);
+    return wait.until(driver -> Arrays.stream(elements)
+        .allMatch(WebElement::isEnabled));
+  }
+
+  private boolean waitForPageToLoad(Loadable page) {
+    WebDriverWait wait = new WebDriverWait(webDriver, 10);
+    wait.until(isJavascriptReady());
+    return page.isLoaded();
+  }
+
+  private Function<WebDriver, Boolean> isJavascriptReady() {
+    return driver -> ((JavascriptExecutor) driver)
+        .executeScript("return document.readyState")
+        .equals("complete");
+  }
+
+  @Override
+  public void destroy() {
     webDriver.quit();
   }
 }
-

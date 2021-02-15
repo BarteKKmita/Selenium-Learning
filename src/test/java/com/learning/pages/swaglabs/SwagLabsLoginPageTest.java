@@ -2,23 +2,23 @@ package com.learning.pages.swaglabs;
 
 import static org.testng.Assert.assertEquals;
 
-import com.google.inject.Inject;
-import com.learning.ApplicationModule;
+import com.learning.TestsConfiguration;
 import com.learning.browsers.Browser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Guice;
 import org.testng.annotations.Test;
 
-@Guice(modules = ApplicationModule.class)
-public class SwagLabsLoginPageTest {
+@ContextConfiguration(classes = TestsConfiguration.class)
+public class SwagLabsLoginPageTest extends AbstractTestNGSpringContextTests {
 
-  @Inject
+  @Autowired
   private Browser browser;
-
-  @Inject
+  @Autowired
   private SwagLabsLoginPage swagLabsLoginPage;
-  @Inject
-  private SwagLabsInventory swagLabsInventoryPage;
+  @Autowired
+  private SwagLabsInventoryPage swagLabsInventoryPage;
 
   @Test(dataProvider = "successfulLoginData")
   void shouldGoToShopPageWhenSuccessfulLogin(String username, String password) {

@@ -1,25 +1,19 @@
 package com.learning.pages.google;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 
-import com.google.inject.Inject;
-import com.learning.ApplicationModule;
-import org.testng.annotations.Guice;
+import com.learning.TestsConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
-@Guice(modules = ApplicationModule.class)
-public class FirstSeleniumTest {
+@ContextConfiguration(classes = TestsConfiguration.class)
+public class FirstSeleniumTest extends AbstractTestNGSpringContextTests {
 
-  @Inject
+  @Autowired
   private GoogleSearchPage googleSearchPage;
 
-  @Test
-  void shouldGooglePageNotBeNullWhenInjected() {
-    assertNotNull(googleSearchPage);
-  }
-
-  @lombok.SneakyThrows
   @Test
   void shouldFindElementOnGoogleWebSite() {
     googleSearchPage.open();
@@ -34,6 +28,6 @@ public class FirstSeleniumTest {
     googleSearchPage.open();
     int actualInputElements = googleSearchPage.getAllInputsCount();
     //Then
-    assertEquals(expectedInputElements, actualInputElements);
+    assertEquals(actualInputElements, expectedInputElements);
   }
 }
