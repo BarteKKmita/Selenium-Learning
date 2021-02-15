@@ -17,6 +17,8 @@ public class SwagLabsInventoryPage extends PageBase {
   private List<WebElement> offeringCards;
   @FindBy(css = "span[class='fa-layers-counter shopping_cart_badge']")
   private WebElement cart;
+  @FindBy(css = "img[class='inventory_item_img']")
+  private List<WebElement> itemPictures;
 
   public SwagLabsInventoryPage(@Value("${swagLabsInventoryURL}") String swagLabsInventoryURL) {
     this.swagLabsInventoryURL = swagLabsInventoryURL;
@@ -42,6 +44,12 @@ public class SwagLabsInventoryPage extends PageBase {
   @Override
   public boolean isLoaded() {
     return browser.waitForElementsToLoad(offeringCards.toArray(WebElement[]::new));
+  }
+
+  public boolean arePicturesLoaded() {
+    return itemPictures.stream()
+        .allMatch(picture ->
+            picture.getSize().height == 224 && picture.getSize().width == 179);
   }
 
   private OfferingCard getItem(String itemName) {
